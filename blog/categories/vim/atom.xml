@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Vim | Keep walking]]></title>
+  <link href="http://blog.ikumo.cf/blog/categories/vim/atom.xml" rel="self"/>
+  <link href="http://blog.ikumo.cf/"/>
+  <updated>2014-03-19T09:54:17+09:00</updated>
+  <id>http://blog.ikumo.cf/</id>
+  <author>
+    <name><![CDATA[IM ikumo]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[vim的Tabbar插件设置]]></title>
+    <link href="http://blog.ikumo.cf/blog/20131006/vim-tabbar-in-mac/"/>
+    <updated>2013-10-06T18:53:00+09:00</updated>
+    <id>http://blog.ikumo.cf/blog/20131006/vim-tabbar-in-mac</id>
+    <content type="html"><![CDATA[<p>vim的Tabbar插件可以迅速的在已打开的文件中切换，但最近在Mac的Terminal里使用vim的时候，Alt+NUM键并不能迅速切换。</p>
+
+<p>只能修改Tabbar.vim的源码来enable这个功能，</p>
+
+<p>将下面的代码</p>
+
+<p><code>bash
+noremap &lt;unique&gt; &lt;script&gt; ± :call &lt;SID&gt;Bf_SwitchTo( 1)&lt;CR&gt;:&lt;BS&gt;
+noremap &lt;unique&gt; &lt;script&gt; ² :call &lt;SID&gt;Bf_SwitchTo( 2)&lt;CR&gt;:&lt;BS&gt;
+noremap &lt;unique&gt; &lt;script&gt; ³ :call &lt;SID&gt;Bf_SwitchTo( 3)&lt;CR&gt;:&lt;BS&gt;
+noremap &lt;unique&gt; &lt;script&gt; ´ :call &lt;SID&gt;Bf_SwitchTo( 4)&lt;CR&gt;:&lt;BS&gt;
+noremap &lt;unique&gt; &lt;script&gt; µ :call &lt;SID&gt;Bf_SwitchTo( 5)&lt;CR&gt;:&lt;BS&gt;
+noremap &lt;unique&gt; &lt;script&gt; ¶ :call &lt;SID&gt;Bf_SwitchTo( 6)&lt;CR&gt;:&lt;BS&gt;
+noremap &lt;unique&gt; &lt;script&gt; · :call &lt;SID&gt;Bf_SwitchTo( 7)&lt;CR&gt;:&lt;BS&gt;
+noremap &lt;unique&gt; &lt;script&gt; ¸ :call &lt;SID&gt;Bf_SwitchTo( 8)&lt;CR&gt;:&lt;BS&gt;
+</code></p>
+
+<p>改成下面的</p>
+
+<p><code>bash
+noremap &lt;unique&gt; &lt;script&gt; ¡ :call &lt;SID&gt;Bf_SwitchTo( 1)&lt;CR&gt;:&lt;BS&gt;
+noremap &lt;unique&gt; &lt;script&gt; ™ :call &lt;SID&gt;Bf_SwitchTo( 2)&lt;CR&gt;:&lt;BS&gt;
+noremap &lt;unique&gt; &lt;script&gt; £ :call &lt;SID&gt;Bf_SwitchTo( 3)&lt;CR&gt;:&lt;BS&gt;
+noremap &lt;unique&gt; &lt;script&gt; ¢ :call &lt;SID&gt;Bf_SwitchTo( 4)&lt;CR&gt;:&lt;BS&gt;
+noremap &lt;unique&gt; &lt;script&gt; ¢ :call &lt;SID&gt;Bf_SwitchTo( 5)&lt;CR&gt;:&lt;BS&gt;
+noremap &lt;unique&gt; &lt;script&gt; ∞ :call &lt;SID&gt;Bf_SwitchTo( 6)&lt;CR&gt;:&lt;BS&gt;
+noremap &lt;unique&gt; &lt;script&gt; ¶ :call &lt;SID&gt;Bf_SwitchTo( 7)&lt;CR&gt;:&lt;BS&gt;
+noremap &lt;unique&gt; &lt;script&gt; • :call &lt;SID&gt;Bf_SwitchTo( 8)&lt;CR&gt;:&lt;BS&gt;
+</code></p>
+
+<p>在保存的时候还会出现错误，要使用命令<code>:w ++enc=utf-8</code>来。</p>
+]]></content>
+  </entry>
+  
+</feed>

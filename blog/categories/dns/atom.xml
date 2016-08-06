@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: DNS | Keep walking]]></title>
+  <link href="http://blog.ikumo.cf/blog/categories/dns/atom.xml" rel="self"/>
+  <link href="http://blog.ikumo.cf/"/>
+  <updated>2014-03-19T09:54:17+09:00</updated>
+  <id>http://blog.ikumo.cf/</id>
+  <author>
+    <name><![CDATA[IM ikumo]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[DNS configure]]></title>
+    <link href="http://blog.ikumo.cf/blog/20131007/dns-configure/"/>
+    <updated>2013-10-07T12:25:00+09:00</updated>
+    <id>http://blog.ikumo.cf/blog/20131007/dns-configure</id>
+    <content type="html"><![CDATA[<p>域名搭起来有一段时间了，但对域名设置，A记录/CNAME记录，还有DNS Server还不是很熟悉。集中时间调查了一下，而且现在身在墙外，为了墙内墙外的访问速度，现重新配置了一下</p>
+
+<ul>
+<li><p>域名一</p>
+
+<p>在domainmonster购买的，主要做自己的博客和小程序用，
+主要给自己看，偶尔面向国内和国外的ITer们，流量几乎可以忽视，
+因此用的cloudfare，但不起用CDN。cloudfare的确会被国内的DNS卡，
+DNSPod里的某域名用CNAME记录指向被cloudfare解析后的域名时就会报错，
+但把CDN关掉后就可以了。</p></li>
+<li><p>域名二</p>
+
+<p>godaddy购买的，com结尾，虽然名字不是特别好，但和自己常用的id相通，
+犹豫半天还是买了下来，为了以后给自己做个门面。
+该域名内容还没做，但以后终究是要用起来的，况且是作为自己的官方主站，
+因为国内外的访问速度和收录就必须要考虑起来。
+目前打算是DnsPod+Incapsula配合来做</p></li>
+<li><p>域名三</p>
+
+<p>godaddy购买，他人用的商务站，推广和使用都在美帝，因此不存在备案的后顾之忧，
+但考虑到偶尔需要国内人的访问和关注，也是用的DnsPod+Incapsula来做</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

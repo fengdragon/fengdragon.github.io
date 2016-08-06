@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Kindle | Keep walking]]></title>
+  <link href="http://blog.ikumo.cf/blog/categories/kindle/atom.xml" rel="self"/>
+  <link href="http://blog.ikumo.cf/"/>
+  <updated>2014-03-19T09:54:17+09:00</updated>
+  <id>http://blog.ikumo.cf/</id>
+  <author>
+    <name><![CDATA[IM ikumo]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Kindle书库 by Calibre2opds]]></title>
+    <link href="http://blog.ikumo.cf/blog/20130802/kindle-ebook-site/"/>
+    <updated>2013-08-02T14:18:00+09:00</updated>
+    <id>http://blog.ikumo.cf/blog/20130802/kindle-ebook-site</id>
+    <content type="html"><![CDATA[<p>手上搜集着一些用于Kindle上的mobi格式的书籍，有时和朋友谈论起来，总是要互相分享或发送给对方，到那时再一个个找又费时又费力，不由得就想利用手头上能用的资源建起个网站来。</p>
+
+<p>大概的思路是：
+1. 稳定的网络。大小不是大的问题，现在大部分资源都至少1G，或者更多，用于电子书，绰绰有余，而且书在于精，在于读，
+1G大小的书也能读上多半年了，哪怕到时候更新工作量也不是很大。</p>
+
+<ol>
+<li><p>能够自动生成目录，一般书都会存放在一个目录里，手动生成目录以及填入外链实非人力所为。</p></li>
+<li><p>方便发布，程序员嘛。。最好用个<code>git push</code>就可以搞定。。</p></li>
+</ol>
+
+
+<p>这样子搜了一下，已有过几个大站，像子午书简这种是使用dropbox+Calibre建立的，自己的也是采用这种方式，所需要的工具有：</p>
+
+<ol>
+<li>calibre</li>
+<li>calibre2opds</li>
+<li>openshift</li>
+</ol>
+
+
+<!-- more -->
+
+
+<p>流程如下：</p>
+
+<ol>
+<li><p>安装calibre，并添加本地的书库目录，进而生成
+calibre的数据库</p></li>
+<li><p>启动calibre2opds，可以去官网下载，启动<code>sh rungui.sh</code>调用图形界面，将数据库的目录选在刚刚的数据库文件夹，然后generate就可以了</p></li>
+<li><p>现在我们有了一个包含所有书籍的文件夹，然后这个文件夹下的<code>_catalog</code>子文件夹里放有的是生成好的网站，可以打开里面的<code>index.html</code>文件查看</p></li>
+<li><p>在openshift里创建应用，使用<code>rhc</code>命令行<code>git</code>到本地，然后将第3步里谈到的总文件夹拷进来，并在根目录下创建新的index.html文件，里面写入命令跳转到
+<code>_catalog/index.html</code>就可以了</p></li>
+<li><p><code>git push</code>就可以啦～ 不行，你可以点这里
+<a href="http://ebook-fenng.rhcloud.com/">ebook</a></p></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Matlab | Keep walking]]></title>
+  <link href="http://blog.ikumo.cf/blog/categories/matlab/atom.xml" rel="self"/>
+  <link href="http://blog.ikumo.cf/"/>
+  <updated>2014-03-19T09:54:17+09:00</updated>
+  <id>http://blog.ikumo.cf/</id>
+  <author>
+    <name><![CDATA[IM ikumo]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Matlab主题更改]]></title>
+    <link href="http://blog.ikumo.cf/blog/20130802/matlab-theme/"/>
+    <updated>2013-08-02T17:32:00+09:00</updated>
+    <id>http://blog.ikumo.cf/blog/20130802/matlab-theme</id>
+    <content type="html"><![CDATA[<p>首先在Linux下面安装Matlab就费了九牛二虎之力，安好后总感觉界面刺眼，一直不想用，导致进度一拖再拖，现在一想，关于matlab的主题设置肯定也有类似Solarized的了。于是谷歌配置走起。</p>
+
+<p><code>matlab
+com.mathworks.services.Prefs.setBooleanPref('ColorsUseSystem',0);
+com.mathworks.services.Prefs.setColorPref('ColorsBackground',java.awt.Color(7/255,54/255,66/255));
+com.mathworks.services.Prefs.setColorPref('ColorsText',java.awt.Color(133/255,153/255,0/255));
+com.mathworks.services.Prefs.setColorPref('Colors_M_Comments',java.awt.Color(181/255,137/255,0/255));
+com.mathworks.services.Prefs.setColorPref('Colors_M_Keywords',java.awt.Color(38/255,139/255,210/255));
+com.mathworks.services.Prefs.setColorPref('Colors_M_Strings',java.awt.Color(42/255,161/255,152/255));
+</code></p>
+
+<p>在命令行里输入再重启就可以了。</p>
+
+<p>参考了以下两个链接：
+1. <a href="http://blog.csdn.net/inter_xuxing/article/details/8819293">matlab编辑器颜色风格设置</a>
+2. <a href="http://www.mikesoltys.com/2013/02/08/matlab-tip-change-the-color-scheme-to-be-easier-on-your-eyes/">Matlab tip - change the color scheme</a></p>
+]]></content>
+  </entry>
+  
+</feed>

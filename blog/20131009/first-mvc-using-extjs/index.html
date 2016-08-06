@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>ExtJS首个MVC应用入门 - Keep walking</title>
+  <meta name="author" content="IM ikumo">
+
+  
+  <meta name="description" content="the first MVC application using ExtJS, ExtJS tutorial.">
+  <meta name="keywords" content="MVC, application, Javascript, ExtJS, tutorial">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.ikumo.cf/blog/20131009/first-mvc-using-extjs/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+  <script src="/javascripts/html5.js" type="text/javascript"></script>
+  <![endif]-->
+  <link href="/atom.xml" rel="alternate" title="Keep walking" type="application/atom+xml">
+  
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-37149880-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+<script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(100660546); }catch(e){}</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100660546ns.gif" /></p></noscript>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Keep walking</a></h1>
+  
+  <nav role="navigation"><ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/slides/">Slides</a></li>
+  <li><a href="/gallery/">Photos</a></li>
+</ul>
+
+</nav>
+  <div class="clearfix"></div>
+</hgroup>
+
+</header>
+  <div id="main">
+    <div id="content">
+      <div id="main-col" class="alignleft">
+    <div class="blog-main">
+        <article class="hentry" role="article">
+          <div class="article-content">
+    
+      <header>
+        <div class="icon"></div>
+        
+          <p class="meta">
+            
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2013-10-09T20:59:00+09:00" pubdate data-updated="true"><a>2013-10-09 Wed</a></time>
+            
+             | <a href="#disqus_thread">Comments</a>
+            
+          </p>
+        
+        
+          <h1 class="entry-title">ExtJS首个MVC应用入门</h1>
+        
+      </header>
+    
+    
+    <div class="entry-content"><p>应用程序的可扩展性，可维护性和灵活性主要取决于该程序体系结构的质量。不幸的是，它往往都被事后才被考虑到。概念验证和原型转变成大量大量的应用，而示例代码则被复制粘贴入了如此大量应用的基础程序。你估计也会想这么做，因为这是在工程伊始你可以预想到的最快的进度。</p>
+
+<p>但是，相比较于花费在未来维护，扩展和多次重构你的应用的时间上，这点节省下来的时间是微不足道的。遵循一定的约定和坚持在视图，模型，存储器以及控制器被执行前定义是实现一个坚实架构的较好的途径。在这篇文章里，我们将介绍一个较受欢迎的应用和讨论如何构筑用户界面来创建一个稳固的应用程序。</p>
+
+<h1>组织代码</h1>
+
+<hr />
+
+<br />  
+
+
+<p>应用程序的体系结构为与它相关的实际类和框架代码提供结构性和一致性。建立一个良好的体系会赋予应用程序许许多多重要的好处：</p>
+
+<ul>
+<li><p>每个你建立的应用都按相同的模式工作，所以学一通百，节省学习成本</p></li>
+<li><p>移植代码会变得很轻松，因为所有的应用的工作接口都一致</p></li>
+<li><p>你可以使用ExtJS build tool为产品用途创建自己程序的改进版</p></li>
+</ul>
+
+
+<p>在ExtJS 4里面，我们已经定义了一些你在创建应用时或许应该考虑遵循的&#8221;惯例&#8221;，最引人注目的当属统一的目录结构。这个简单的结构将所有的类保存在了app根目录下，该目录里包含了所需要的模型，视图，控制器和存储器的子目录。</p>
+
+<p>在ExtJS 4提供用户体验良好的如何架构你的应用程序的相关训练的同时，
+ExtJS也为用户留有自定义文件和类名的余裕。比如说，你可以决定是否要在你的项目里为控制器加入“Controller”的后缀，
+e.g. “Users”写成“UsersController”。在这种情况下，要记得始终向控制器文件和控制器类加入相同的后缀。最重要的是你要在开始编写你的应用前决定好你的“惯例”，并贯彻它。最后，当你能够调用一切你想使用的类的时候，我们强烈建议您在命名和文件结构上遵循我们的惯例，这将确保你可以使用我们的SDK tool得到优化好的版本。</p>
+
+<!-- more -->
+
+
+<h1>寻求平衡点</h1>
+
+<hr />
+
+<br />
+
+
+<h2>视图</h2>
+
+<hr />
+
+<br />  
+
+
+<p>分割应用程序的UI到我们程序中得视图通常是程序的开始。多数情况下，设计师会为你设计好线框图和UI，例如下图所示的非常诱人的Pandora应用，想象下我们要用ExtJS来实现它。</p>
+
+<p><img src="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/base_layout.png" alt="Pandora" /></p>
+
+<p>我们想实现的是在过于繁琐和过于笼统的视图中获取平衡，让我们看一下如果我们将UI过度划分会怎么样：</p>
+
+<p><img src="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/too-granular.png" alt="Pandora-granular" /></p>
+
+<p>如上图若划分过细的话会使得工程难以管理，引用和控制这些视图。同时，由于每一个视图都会拥有它自己的文件，创建过多的视图或许会使得定位相关的文件过于困难。</p>
+
+<p>另一方面，我们也不希望视图被划分的过于笼统，因为它会影响更改视图时的灵活性。</p>
+
+<p><img src="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/too-general.png" alt="Pandora-general" /></p>
+
+<p>在这个场景里，每个视图都被过度的简化。当一个视图里德某些部分需要被自定义视图逻辑的时候，视图类将疲于过多的回应，导致视图类变得过于困难维护。还有，如果设计师改变了思路或者UI的排版，我们也会被自己所设计的视图定义及逻辑的重构所困扰。</p>
+
+<p>正确的平衡点在于我们能够简单的重新安排页面上的视图而不必每次都去重构它们。比如说，我们想把Ad做成一个单独的视图，这样我们可以简单的移动它甚至在以后移除它。</p>
+
+<p><img src="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/balanced.png" alt="Pandora-balance" /></p>
+
+<p>在这个版本里，我们依据各个视图的任务划分了不同的视图。一旦你已经有了大体的划分思路后，依然可以调整视图的细度当你实际实现他们的时候。有时你会觉得某两个视图应该被合并成一个，或者某个视图太过笼统应该被划分为多个，但一个好的基础会有助于开始。</p>
+
+<h2>模型</h2>
+
+<hr />
+
+<br />  
+
+
+<p>现在我们已经布置好了视图的基本结构，该是分析模型的时候了。通过观察在我们UI里动态数据的类型，我们可以大致了解到在该应用里所需要的不同的模型。</p>
+
+<p><img src="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/models.png" alt="Pandora-model" /></p>
+
+<p>观察上图，我们决定仅仅使用两个模型：音乐与音乐站。我们可以再多定义两个模型，例如歌手和唱片集。但是也类似于视图的划分，我们不希望模型过于得琐碎。在本例子中，我们没有必要单独划分出歌手和唱片集，是因为在这个应用里程序不支持用户通过歌手来选择指定的歌曲。相反的，数据是按音乐站来组织的，而且音乐才是数据的关键，歌手和唱片集信息仅作为歌曲的属性，这意味着我们可以合并音乐，歌手和唱片集信息到一个模型里面。这会大大简化该应用程序的数据上的设置，而且也会更易于服务器端API的实现，因为我们不必加载单独的歌手或是唱片信息。总而言之，该例我们将会只有两个模型：音乐与音乐站。</p>
+
+<h1>存储器</h1>
+
+<hr />
+
+<br />
+
+
+<p>我们刚刚决定了应该使用的模型，现在让我们按同样的方式来考虑下该怎么设计存储器。</p>
+
+<p><img src="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/stores.png" alt="Pandora-store" /></p>
+
+<p>辨别出所需要的存储器相较而言还是比较容易的。一个好的策略是判断出页面上所有的数据组件。在本例中，我们拥有一份关于用户收藏的音乐站，最近播放过的歌曲滚动列表以及可以显示搜索结果的搜索栏的清单。与此同时，每一个相对应的视图也需要同存储器绑定。</p>
+
+<h1>控制器</h1>
+
+<hr />
+
+<br />
+
+
+<p>通过设计控制器，你可以采用多种方式来确定应用的响应方式。让我们看一下在本例中都需要哪些控制器吧。</p>
+
+<p><img src="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/controllers.png" alt="Pandora-controller" /></p>
+
+<p>这里我们有两个基础的控制器：音乐控制器和音乐站控制器。
+ExtJS 4允许你使用一个控制器同时控制多个视图。我们的音乐站控制器要负责新建音乐站，以及将用户要收藏的音乐站加载到音乐站列表里去的逻辑功能。音乐管理器将要处理管理音乐信息的一览，最近播放过的歌曲的存储和用户的相关操作，比如喜欢/不喜欢，暂停，跳过等等。控制器之间能够通过激励和监听程序的事件来互动。如果我们再增添两个额外的控制器：一个用来管理回放，另一个为了音乐站的搜索，我想我们已经找到了最好的责任划分。</p>
+
+<h1>多思量</h1>
+
+<hr />
+
+<br />
+
+
+<p>动手写代码之前要优先考虑整个应用的架构的思路希望对你的工作有益处，我们发现，讨论程序的细节会有助于建立更加灵活和易于管理的代码。</p>
+
+<p>关于ExtJs的原文可以见<a href="http://docs.sencha.com/extjs/4.2.1/#!/guide/mvc_pt1">这里</a></p>
+</div>
+     <footer>
+       <p class="meta">
+         
+
+
+         
+
+<span class="categories">
+  Category:
+  
+    <a class='category' href='/blog/categories/extjs/'>ExtJS</a>
+  
+</span>
+
+
+       </p>
+       <p class="meta">
+         
+           <a class="alignLeft" href="/blog/20131007/dns-configure/" title="Previous Post: DNS configure">&laquo; DNS configure</a>
+         
+         
+           <a class="alignRight" href="/blog/20131011/first-mvc-using-extjs-part-2/" title="Next Post: ExtJS首个MVC应用入门 part 2">ExtJS首个MVC应用入门 part 2 &raquo;</a>
+         
+       </p>
+     </footer>
+    
+</div>
+
+        </article>
+        
+          <section class="comments">
+              <div class="sharing">
+  
+
+  
+
+  
+
+  
+</div>
+
+          </section>
+        
+        
+          <section>
+            <h1>Comments</h1>
+            <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+          </section>
+        
+    </div>
+</div>
+
+<aside id="sidebar" class="alignright">
+  
+    
+<div class="search">
+    <form action="http://google.com/search" method="get">
+      <fieldset role="search">
+        <input type="hidden" name="q" value="site:blog.ikumo.cf" />
+        <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+      </fieldset>
+    </form>
+</div>
+
+<section>
+    <h1>Categories</h1>
+    <ul id="categories">
+        <li class='category'><a href='/blog/categories/dns/'>DNS (1)</a></li>
+<li class='category'><a href='/blog/categories/dairy/'>Dairy (12)</a></li>
+<li class='category'><a href='/blog/categories/debian/'>Debian (1)</a></li>
+<li class='category'><a href='/blog/categories/driver/'>Driver (3)</a></li>
+<li class='category'><a href='/blog/categories/essay/'>Essay (2)</a></li>
+<li class='category'><a href='/blog/categories/extjs/'>ExtJS (2)</a></li>
+<li class='category'><a href='/blog/categories/film/'>Film (1)</a></li>
+<li class='category'><a href='/blog/categories/fit/'>Fit (1)</a></li>
+<li class='category'><a href='/blog/categories/japan/'>Japan (4)</a></li>
+<li class='category'><a href='/blog/categories/javascript/'>Javascript (1)</a></li>
+<li class='category'><a href='/blog/categories/kindle/'>Kindle (1)</a></li>
+<li class='category'><a href='/blog/categories/linux/'>Linux (8)</a></li>
+<li class='category'><a href='/blog/categories/markdown/'>Markdown (1)</a></li>
+<li class='category'><a href='/blog/categories/math/'>Math (1)</a></li>
+<li class='category'><a href='/blog/categories/matlab/'>Matlab (1)</a></li>
+<li class='category'><a href='/blog/categories/nokia/'>Nokia (2)</a></li>
+<li class='category'><a href='/blog/categories/octopress/'>Octopress (7)</a></li>
+<li class='category'><a href='/blog/categories/opengazer/'>Opengazer (1)</a></li>
+<li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
+<li class='category'><a href='/blog/categories/read/'>Read (1)</a></li>
+<li class='category'><a href='/blog/categories/travel/'>Travel (4)</a></li>
+<li class='category'><a href='/blog/categories/vim/'>Vim (1)</a></li>
+<li class='category'><a href='/blog/categories/visa/'>Visa (2)</a></li>
+
+    </ul>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/20131011/talmudh-law/">塔木德财产分割算法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20131011/first-mvc-using-extjs-part-2/">ExtJS首个MVC应用入门 part 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20131009/first-mvc-using-extjs/">ExtJS首个MVC应用入门</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20131007/dns-configure/">DNS configure</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20131006/vim-tabbar-in-mac/">vim的Tabbar插件设置</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130813/galaxy-note-2/">Docomo Galaxy Note II 刷机及root</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130808/matlab-installation/">Matlab在debian/linux下的安装方法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130806/first-fit-time/">增肌塑性第一步 --- 算</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130805/hiwifi/">极路由事件</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130802/matlab-theme/">Matlab主题更改</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130802/kindle-ebook-site/">Kindle书库 by Calibre2opds</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130731/postcard-or-memory/">你留下的是明信片，还是满满的回忆</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130730/australia-visa-application/">在东京申请澳大利亚商务签</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130729/libpperconnection/">Home目录下生成libpeerconnection.log的解决方法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130704/road-drive/">路上练习</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+<h1>Recent comments</h1>
+<script type="text/javascript" src="http://blog-ikumo.disqus.com/recent_comments_widget.js?num_items=15&hide_avatars=0&avatar_size=32&excerpt_length=200"></script>
+</section>
+<section>
+<h1>Link</h1>
+
+<ul>
+    <li>
+    <a href="http://www.google.com/">Google</a>
+    </li>
+    <li>
+    <a href="#">Tobe...</a>
+    </li>
+</ul>
+
+
+</section>
+
+  
+</aside>
+
+<div class="clearfix"></div>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><div class="alignLeft">
+  &copy; 2014 - IM ikumo -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</div>
+<div class="clearfix"></div>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'blog-ikumo';
+      
+        
+        // var disqus_developer = 1;
+        // var disqus_identifier = 'http://blog.ikumo.cf/blog/20131009/first-mvc-using-extjs/';
+        // var disqus_url = 'http://blog.ikumo.cf/blog/20131009/first-mvc-using-extjs/';
+        // var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

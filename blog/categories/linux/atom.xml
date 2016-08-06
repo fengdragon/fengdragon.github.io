@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Linux | Keep walking]]></title>
+  <link href="http://blog.ikumo.cf/blog/categories/linux/atom.xml" rel="self"/>
+  <link href="http://blog.ikumo.cf/"/>
+  <updated>2014-03-19T09:54:17+09:00</updated>
+  <id>http://blog.ikumo.cf/</id>
+  <author>
+    <name><![CDATA[IM ikumo]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Matlab在debian/linux下的安装方法]]></title>
+    <link href="http://blog.ikumo.cf/blog/20130808/matlab-installation/"/>
+    <updated>2013-08-08T13:19:00+09:00</updated>
+    <id>http://blog.ikumo.cf/blog/20130808/matlab-installation</id>
+    <content type="html"><![CDATA[<p>频发性的手贱，上周一时贪爽，从Debian 6升级到了wheezy，结果运行是挺正常的，但ibus的输入候选框只能在大窗口的左下。比如说我用ibus的中文输入法在terminal里用vim写日志，如果我把terminal全屏，就看不到中文输入的候选项。。。网页也一样，在地址栏或者搜索栏输入的时候，中日文的候选框也经常跑到整个浏览器的最下左方。同时更重要的是以前编译过的程序跑不起来。。。于是我只能再退回去了，而退回去也没有什么好法子，就是格掉/分区，然后保留/home分区重装了一下。</p>
+
+<!-- more -->
+
+
+<p>重装之后一切配置都还在，只偶尔少几个软件，使用apt-get就可以了，但matlab这种大家伙还是得自己光盘安装了。</p>
+
+<ul>
+<li><p>首先光盘不好找。。下了几个包都是win安装程序，要支持linux 64位的还真得翻一番。最终我是在实验室的角落旮旯里找到了2009年版的。。算了，能用就好。</p></li>
+<li><p>光盘挂载，但无法安装。挂载比较简单，使用<code>mount</code>命令就可以，但进入后执行<code>sudo sh install</code>就会报错：</p></li>
+</ul>
+
+
+<p>``` bash
+An error status was returned by the program 'xsetup',
+the X Window System version of 'install'. The following
+messages were written to standard error:</p>
+
+<p>/home/$USER/mathworks_downloads/R2009a/update/install/main.sh: line 86: /home/$USER/Download/MatlabR2009a/update/bin/$ARCH/xsetup: Permission denied</p>
+
+<p>Attempt to fix the problem and try again. If X is not available
+or 'xsetup' cannot be made to work then try the terminal
+version of 'install' using the command:</p>
+
+<p>install<em> -t or INSTALL</em> -t</p>
+
+<hr />
+
+<p>Sorry! Setup aborted . . .
+```</p>
+
+<p>出现错误的原因是简单的挂载，里面的文件都是不可执行的，可以运行<code>mount</code>，输出的list里就能看到挂载的选项是<code>noexec</code>的，执行
+<code>bash
+mount -o remount,exec $CD_DEVICE
+</code></p>
+
+<p>就可以了。</p>
+
+<ul>
+<li>执行成功，但缺少lib：<code>libXp.so.6</code>，此时只需要安装libXp6即可</li>
+</ul>
+
+
+<p><code>bash
+sudo apt-get install libXp6
+</code></p>
+
+<p>此后就可以进入安装程序了</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Matlab主题更改]]></title>
+    <link href="http://blog.ikumo.cf/blog/20130802/matlab-theme/"/>
+    <updated>2013-08-02T17:32:00+09:00</updated>
+    <id>http://blog.ikumo.cf/blog/20130802/matlab-theme</id>
+    <content type="html"><![CDATA[<p>首先在Linux下面安装Matlab就费了九牛二虎之力，安好后总感觉界面刺眼，一直不想用，导致进度一拖再拖，现在一想，关于matlab的主题设置肯定也有类似Solarized的了。于是谷歌配置走起。</p>
+
+<p><code>matlab
+com.mathworks.services.Prefs.setBooleanPref('ColorsUseSystem',0);
+com.mathworks.services.Prefs.setColorPref('ColorsBackground',java.awt.Color(7/255,54/255,66/255));
+com.mathworks.services.Prefs.setColorPref('ColorsText',java.awt.Color(133/255,153/255,0/255));
+com.mathworks.services.Prefs.setColorPref('Colors_M_Comments',java.awt.Color(181/255,137/255,0/255));
+com.mathworks.services.Prefs.setColorPref('Colors_M_Keywords',java.awt.Color(38/255,139/255,210/255));
+com.mathworks.services.Prefs.setColorPref('Colors_M_Strings',java.awt.Color(42/255,161/255,152/255));
+</code></p>
+
+<p>在命令行里输入再重启就可以了。</p>
+
+<p>参考了以下两个链接：
+1. <a href="http://blog.csdn.net/inter_xuxing/article/details/8819293">matlab编辑器颜色风格设置</a>
+2. <a href="http://www.mikesoltys.com/2013/02/08/matlab-tip-change-the-color-scheme-to-be-easier-on-your-eyes/">Matlab tip - change the color scheme</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Home目录下生成libpeerconnection.log的解决方法]]></title>
+    <link href="http://blog.ikumo.cf/blog/20130729/libpperconnection/"/>
+    <updated>2013-07-29T15:10:00+09:00</updated>
+    <id>http://blog.ikumo.cf/blog/20130729/libpperconnection</id>
+    <content type="html"><![CDATA[<p>最近又手贱了一下，升级到了debian wheezy，各种配置文件有了大大小小的问题，不过突然发现chromium好用了一下，但和Monkey的某些script还是有冲突的存在。而且用着用着就发现用户目录下突然多出了一个libpeerconnection.log的临时文件，对于一个强迫症患者，这简直是令人抓狂的存在。你想，开机的默认目录就是用户目录，而第一个命令又大多是<code>ls</code>，天天瞅见这么一个空文件摆在那里。。。</p>
+
+<!-- more -->
+
+
+<p>google了一下，发现是新版本的bug，目前还没有什么好办法，只能修改配置文件，暂时让它转移到其他目录下面</p>
+
+<p>找到<code>/opt/google/chrome/google-chrome</code>
+里面的这一行代码</p>
+
+<p><code>sh
+exec -a "$ 0" "$ HERE / chrome" "$ @"
+</code>
+在这段代码上一行添加
+<code>sh
+cd /tmp
+</code>
+保存，就可以是该log文件暂时生成在/tmp下面了</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[sudo下为什么没有高亮]]></title>
+    <link href="http://blog.ikumo.cf/blog/20130502/no-syntax-highlighting-when-i-sudo/"/>
+    <updated>2013-05-02T11:59:00+09:00</updated>
+    <id>http://blog.ikumo.cf/blog/20130502/no-syntax-highlighting-when-i-sudo</id>
+    <content type="html"><![CDATA[<p>在使用linux的时候，总希望界面是有高亮的，最近在使用远程控制时，发现sudo下面vi没有高亮，这就仿佛一下从retina掉到了大马塞克黑白世界里，</p>
+
+<p>可用来帮助的命令：</p>
+
+<p>```bash
+which vi
+sudo which vi</p>
+
+<p>/usr/bin/vim
+/bin/vi
+```</p>
+
+<p>由于sudo下面调用的vi不同，所以设置的高亮不被调用，解决办法是</p>
+
+<p><code>bash
+alias sudo='sudo '
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Add watermark to a video]]></title>
+    <link href="http://blog.ikumo.cf/blog/20130214/add-watermark-to-a-video/"/>
+    <updated>2013-02-14T17:32:00+09:00</updated>
+    <id>http://blog.ikumo.cf/blog/20130214/add-watermark-to-a-video</id>
+    <content type="html"><![CDATA[<p>This article explains how to add a watermark image to a video file
+using FFmpeg (www.ffmpeg.org). Typically a watermark is used to
+protect ownership/credit of the video and for Marketing/Branding
+the video with a Logo.
+One of the most common areas where watermarks appear is the
+bottom right hand corner of a video.
+I’m going to cover all four corners, since these are generally
+the ideal placements for watermarks.</p>
+
+<p>FFmpeg is a free software / open source project that produces
+libraries and programs for handling multimedia such as video.
+Many of it developers also are part of the MPlayer project.
+Primarily this project is geared towards Linux OS, however,
+much of it has been ported over to work with Windows 32bit and 64bit.
+FFmpeg is being utilized in a number of software applications;
+including web applications such as PHPmotion (www.phpmotion.com).
+Not only does it provide handy tools, it also provided
+extremely useful features and functionality that
+can be added to a variety of software applications.</p>
+]]></content>
+  </entry>
+  
+</feed>

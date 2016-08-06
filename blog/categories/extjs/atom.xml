@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ExtJS | Keep walking]]></title>
+  <link href="http://blog.ikumo.cf/blog/categories/extjs/atom.xml" rel="self"/>
+  <link href="http://blog.ikumo.cf/"/>
+  <updated>2014-03-19T09:54:17+09:00</updated>
+  <id>http://blog.ikumo.cf/</id>
+  <author>
+    <name><![CDATA[IM ikumo]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[ExtJS首个MVC应用入门 part 2]]></title>
+    <link href="http://blog.ikumo.cf/blog/20131011/first-mvc-using-extjs-part-2/"/>
+    <updated>2013-10-11T00:24:00+09:00</updated>
+    <id>http://blog.ikumo.cf/blog/20131011/first-mvc-using-extjs-part-2</id>
+    <content type="html"><![CDATA[<p>在上一节里我们讨论了如何使用ExtJS架构一个Pandora style的应用。我们巩固了一遍MVC的体系结构，并将它应用在了有多个视图和模型的相对复杂的UI应用里面。在这一篇文章里，我们需要跳越应用视觉上的结构，通过使用<code>Ext.application</code>
+和<code>Viewport</code>类来深入的挖掘该如何设计和编写控制器与模型的代码。</p>
+
+<p>让我们开始吧！</p>
+
+<h1>定义我们的应用</h1>
+
+<hr />
+
+<br />
+
+
+<p>在ExtJS 3里面，程序的入口是以<code>Ext.onReady</code>方法为始的，并且开发人员需要时刻拿出应用程序的架构。但在ExtJS 4里，我们有类MVC的模式，该模式会在你创建应用时帮你得到最优的练习。</p>
+
+<p>使用新MVC包来创建应用需要你调用<code>Ext.application</code>方法来得到程序的入口。该方法会创建一个<code>Ext.app.Application</code>的实例，并会在页面准备好的时候唤起加载程序。它本质上在添加新功能的时候取代了<code>Ext.onReady</code>的必要性，比如自动创建viewport和建立起你的namespace。</p>
+
+<p><em>app/Application.js</em></p>
+
+<p>``` javascript
+Ext.application({</p>
+
+<pre><code>name: 'Pandora',
+autoCreateViewport: true,
+
+launch: function() {
+    // This is fired as soon as the page is ready
+}
+</code></pre>
+
+<p>});
+```</p>
+
+<p>上例中的<code>name</code>属性会促使程序建立一个新的命名空间，我们所有的视图，模型，存储器和控制器都存在于该空间里。通过设置<code>autoCreateViewport</code>为<code>true</code>，该框架会自动的按照“惯例”加载<code>app/view/Viewport.js</code>文件，在该文件里，需要有一个定义为<code>Pandora.view.Viewport</code>的类来匹配该文件中配置好的命名空间。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ExtJS首个MVC应用入门]]></title>
+    <link href="http://blog.ikumo.cf/blog/20131009/first-mvc-using-extjs/"/>
+    <updated>2013-10-09T20:59:00+09:00</updated>
+    <id>http://blog.ikumo.cf/blog/20131009/first-mvc-using-extjs</id>
+    <content type="html"><![CDATA[<p>应用程序的可扩展性，可维护性和灵活性主要取决于该程序体系结构的质量。不幸的是，它往往都被事后才被考虑到。概念验证和原型转变成大量大量的应用，而示例代码则被复制粘贴入了如此大量应用的基础程序。你估计也会想这么做，因为这是在工程伊始你可以预想到的最快的进度。</p>
+
+<p>但是，相比较于花费在未来维护，扩展和多次重构你的应用的时间上，这点节省下来的时间是微不足道的。遵循一定的约定和坚持在视图，模型，存储器以及控制器被执行前定义是实现一个坚实架构的较好的途径。在这篇文章里，我们将介绍一个较受欢迎的应用和讨论如何构筑用户界面来创建一个稳固的应用程序。</p>
+
+<h1>组织代码</h1>
+
+<hr />
+
+<br />  
+
+
+<p>应用程序的体系结构为与它相关的实际类和框架代码提供结构性和一致性。建立一个良好的体系会赋予应用程序许许多多重要的好处：</p>
+
+<ul>
+<li><p>每个你建立的应用都按相同的模式工作，所以学一通百，节省学习成本</p></li>
+<li><p>移植代码会变得很轻松，因为所有的应用的工作接口都一致</p></li>
+<li><p>你可以使用ExtJS build tool为产品用途创建自己程序的改进版</p></li>
+</ul>
+
+
+<p>在ExtJS 4里面，我们已经定义了一些你在创建应用时或许应该考虑遵循的"惯例"，最引人注目的当属统一的目录结构。这个简单的结构将所有的类保存在了app根目录下，该目录里包含了所需要的模型，视图，控制器和存储器的子目录。</p>
+
+<p>在ExtJS 4提供用户体验良好的如何架构你的应用程序的相关训练的同时，
+ExtJS也为用户留有自定义文件和类名的余裕。比如说，你可以决定是否要在你的项目里为控制器加入“Controller”的后缀，
+e.g. “Users”写成“UsersController”。在这种情况下，要记得始终向控制器文件和控制器类加入相同的后缀。最重要的是你要在开始编写你的应用前决定好你的“惯例”，并贯彻它。最后，当你能够调用一切你想使用的类的时候，我们强烈建议您在命名和文件结构上遵循我们的惯例，这将确保你可以使用我们的SDK tool得到优化好的版本。</p>
+
+<!-- more -->
+
+
+<h1>寻求平衡点</h1>
+
+<hr />
+
+<br />
+
+
+<h2>视图</h2>
+
+<hr />
+
+<br />  
+
+
+<p>分割应用程序的UI到我们程序中得视图通常是程序的开始。多数情况下，设计师会为你设计好线框图和UI，例如下图所示的非常诱人的Pandora应用，想象下我们要用ExtJS来实现它。</p>
+
+<p><img src="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/base_layout.png" alt="Pandora" /></p>
+
+<p>我们想实现的是在过于繁琐和过于笼统的视图中获取平衡，让我们看一下如果我们将UI过度划分会怎么样：</p>
+
+<p><img src="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/too-granular.png" alt="Pandora-granular" /></p>
+
+<p>如上图若划分过细的话会使得工程难以管理，引用和控制这些视图。同时，由于每一个视图都会拥有它自己的文件，创建过多的视图或许会使得定位相关的文件过于困难。</p>
+
+<p>另一方面，我们也不希望视图被划分的过于笼统，因为它会影响更改视图时的灵活性。</p>
+
+<p><img src="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/too-general.png" alt="Pandora-general" /></p>
+
+<p>在这个场景里，每个视图都被过度的简化。当一个视图里德某些部分需要被自定义视图逻辑的时候，视图类将疲于过多的回应，导致视图类变得过于困难维护。还有，如果设计师改变了思路或者UI的排版，我们也会被自己所设计的视图定义及逻辑的重构所困扰。</p>
+
+<p>正确的平衡点在于我们能够简单的重新安排页面上的视图而不必每次都去重构它们。比如说，我们想把Ad做成一个单独的视图，这样我们可以简单的移动它甚至在以后移除它。</p>
+
+<p><img src="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/balanced.png" alt="Pandora-balance" /></p>
+
+<p>在这个版本里，我们依据各个视图的任务划分了不同的视图。一旦你已经有了大体的划分思路后，依然可以调整视图的细度当你实际实现他们的时候。有时你会觉得某两个视图应该被合并成一个，或者某个视图太过笼统应该被划分为多个，但一个好的基础会有助于开始。</p>
+
+<h2>模型</h2>
+
+<hr />
+
+<br />  
+
+
+<p>现在我们已经布置好了视图的基本结构，该是分析模型的时候了。通过观察在我们UI里动态数据的类型，我们可以大致了解到在该应用里所需要的不同的模型。</p>
+
+<p><img src="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/models.png" alt="Pandora-model" /></p>
+
+<p>观察上图，我们决定仅仅使用两个模型：音乐与音乐站。我们可以再多定义两个模型，例如歌手和唱片集。但是也类似于视图的划分，我们不希望模型过于得琐碎。在本例子中，我们没有必要单独划分出歌手和唱片集，是因为在这个应用里程序不支持用户通过歌手来选择指定的歌曲。相反的，数据是按音乐站来组织的，而且音乐才是数据的关键，歌手和唱片集信息仅作为歌曲的属性，这意味着我们可以合并音乐，歌手和唱片集信息到一个模型里面。这会大大简化该应用程序的数据上的设置，而且也会更易于服务器端API的实现，因为我们不必加载单独的歌手或是唱片信息。总而言之，该例我们将会只有两个模型：音乐与音乐站。</p>
+
+<h1>存储器</h1>
+
+<hr />
+
+<br />
+
+
+<p>我们刚刚决定了应该使用的模型，现在让我们按同样的方式来考虑下该怎么设计存储器。</p>
+
+<p><img src="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/stores.png" alt="Pandora-store" /></p>
+
+<p>辨别出所需要的存储器相较而言还是比较容易的。一个好的策略是判断出页面上所有的数据组件。在本例中，我们拥有一份关于用户收藏的音乐站，最近播放过的歌曲滚动列表以及可以显示搜索结果的搜索栏的清单。与此同时，每一个相对应的视图也需要同存储器绑定。</p>
+
+<h1>控制器</h1>
+
+<hr />
+
+<br />
+
+
+<p>通过设计控制器，你可以采用多种方式来确定应用的响应方式。让我们看一下在本例中都需要哪些控制器吧。</p>
+
+<p><img src="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/controllers.png" alt="Pandora-controller" /></p>
+
+<p>这里我们有两个基础的控制器：音乐控制器和音乐站控制器。
+ExtJS 4允许你使用一个控制器同时控制多个视图。我们的音乐站控制器要负责新建音乐站，以及将用户要收藏的音乐站加载到音乐站列表里去的逻辑功能。音乐管理器将要处理管理音乐信息的一览，最近播放过的歌曲的存储和用户的相关操作，比如喜欢/不喜欢，暂停，跳过等等。控制器之间能够通过激励和监听程序的事件来互动。如果我们再增添两个额外的控制器：一个用来管理回放，另一个为了音乐站的搜索，我想我们已经找到了最好的责任划分。</p>
+
+<h1>多思量</h1>
+
+<hr />
+
+<br />
+
+
+<p>动手写代码之前要优先考虑整个应用的架构的思路希望对你的工作有益处，我们发现，讨论程序的细节会有助于建立更加灵活和易于管理的代码。</p>
+
+<p>关于ExtJs的原文可以见<a href="http://docs.sencha.com/extjs/4.2.1/#!/guide/mvc_pt1">这里</a></p>
+]]></content>
+  </entry>
+  
+</feed>

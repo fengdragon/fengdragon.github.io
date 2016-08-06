@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Opengazer | Keep walking]]></title>
+  <link href="http://blog.ikumo.cf/blog/categories/opengazer/atom.xml" rel="self"/>
+  <link href="http://blog.ikumo.cf/"/>
+  <updated>2014-03-19T09:54:17+09:00</updated>
+  <id>http://blog.ikumo.cf/</id>
+  <author>
+    <name><![CDATA[IM ikumo]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Install opengazer with Debian 6.0.6-amd64]]></title>
+    <link href="http://blog.ikumo.cf/blog/20130201/install-opengazer-with-debian-6-dot-0-6-amd64/"/>
+    <updated>2013-02-01T16:33:00+09:00</updated>
+    <id>http://blog.ikumo.cf/blog/20130201/install-opengazer-with-debian-6-dot-0-6-amd64</id>
+    <content type="html"><![CDATA[<p>写之前不能不再吐槽下自己反复造轮子。。</p>
+
+<p>新买了一个台式机，就想着把自己的东西都干净的转移过来，每次都配置安装些必须的软件花好长时间,
+这次还是安装opengazer，比意向中安装要顺利了许多。。难道是换了64位机?</p>
+
+<ul>
+<li>准备环境</li>
+</ul>
+
+
+<p>因为安装后面要用到vxl，而vxl会生成libmpeg2-4的文件，所以一开始要卸掉libmpeg2-4</p>
+
+<p><code>bash
+sudo apt-get remove libmpeg2-4
+sudo apt-get remove libmpeg2-4-dev
+</code></p>
+
+<p>之后安装些必备的包</p>
+
+<p><code>bash
+sudo apt-get install libcv-dev libhighgui-dev libcvaux-dev libgtkmm-2.4-dev libcairomm-1.0-dev libboost-dev
+</code></p>
+
+<ul>
+<li>下载vxl-1.14.0</li>
+</ul>
+
+
+<p>官网上写的是1.8，一些博文也是建议使用低版本的vxl，但此次安装使用的1.14，也安装通过了。</p>
+
+<p>vxl的安装比较另类点，要自己手工配置build文件夹，我的如下（vxl-src：/home/ikumo/vxl-1.14.0）</p>
+
+<p><code>bash
+mkdir /home/ikumo/vxl-1.14-build
+cd /home/ikumo/vxl-1.14-build
+ccmake ../vxl-1.14.0
+</code></p>
+
+<p><code>ccmake</code>需要cmake-gui，如果没有的话也可以用<code>cmake -i</code>,
+选项里enable <code>SHARED_LIBS</code>，配置通过后<code>generate</code>,之后<code>make</code>,
+<code>sudo make install</code>就可以了。</p>
+
+<p>以往每次<code>make</code>的时候报许多错，头疼的要命，这次只有一两个不疼不痒，没记住什么错根本就。。</p>
+
+<ul>
+<li>下载opengazer</li>
+</ul>
+
+
+<p>下载解压git initial,编辑它的<code>Makefile</code>文件，将<code>VXLDIR</code>改成vxl路径，如<code>/home/ikumo/vxl-1.14-build/</code>,连接必须的动态库到<code>/usr/local/include</code>
+里面去</p>
+
+<p><code>bash
+cd /usr/local/include
+sudo ln -s vxl/core/vnl/ .
+sudo ln -s vxl/core/vgl/ .
+sudo ln -s vxl/core/ .
+sudo ln -s vxl/vcl/ .
+</code></p>
+
+<p>之后进入opengazer执行<code>make</code>，一般中间会蹦出一个exception的错误，根据提示找到源代码里的文件将其改成<code>std::exception</code>就可以编译通过。</p>
+
+<ul>
+<li>运行</li>
+</ul>
+
+
+<p>make通过生成了可以执行的opengazer，执行起来却报错：无法找到shared object,
+一般是因为环境变量没有VXL LIB的信息，export一下即可</p>
+
+<p><code>bash
+export VXLDIR=/usr/local/include/vxl
+export LD_LIBRARY_PATH=$VXLDIR/lib:$LD_LIBRARY_PATH
+</code></p>
+
+<p>到这里 应该就没什么大问题了</p>
+]]></content>
+  </entry>
+  
+</feed>

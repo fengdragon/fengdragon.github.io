@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Markdown | Keep walking]]></title>
+  <link href="http://blog.ikumo.cf/blog/categories/markdown/atom.xml" rel="self"/>
+  <link href="http://blog.ikumo.cf/"/>
+  <updated>2014-03-19T09:54:17+09:00</updated>
+  <id>http://blog.ikumo.cf/</id>
+  <author>
+    <name><![CDATA[IM ikumo]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[用mkd写html时的中文换行]]></title>
+    <link href="http://blog.ikumo.cf/blog/20130503/chinese-br-in-markdown/"/>
+    <updated>2013-05-03T11:45:00+09:00</updated>
+    <id>http://blog.ikumo.cf/blog/20130503/chinese-br-in-markdown</id>
+    <content type="html"><![CDATA[<p>感觉人是越来越懒了，手机不会去越狱，PS3也懒得去破解，
+このままで。。前两天把博客的主题小折腾了一下，虽然说最后还是有点没处理完的东西，但是心想，就这样吧先，先写起来再说</p>
+
+<p>没处理完的东西其中之一就是中文换行的问题，原来一直没有注意，在markdown格式里写中文的时候，换行会被处理成空格，这样在html里面看起来就很别扭，自己当时又不知道如何去改，就搁置在那里。</p>
+
+<p>前几天上网时偶尔遇上了，就顺手改过了，需要修改以下文件<code>~/.rvm/gems/ruby-1.9.3p392/gems/jekyll-0.11.2
+/lib/jekyll/converters/markdown.rb</code></p>
+
+<p>或者<code>~/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1
+/gems/jekyll-0.11.2/lib/jekyll/converters/markdown.rb</code></p>
+
+<p>首先添加</p>
+
+<p>```ruby</p>
+
+<h1>encoding: UTF-8</h1>
+
+<p>class String
+  def join_chinese</p>
+
+<pre><code>unless @chinese_regex
+  han = '\p{Han}|[，。？；：‘’“”、！……（）]'
+  @chinese_regex = Regexp.new("(#{han})\n(#{han})", Regexp::MULTILINE)
+end
+gsub(@chinese_regex, '\1\2')
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<p>然后再将
+<code>ruby
+when 'rdiscount'
+  RDiscount.new(content, *@rdiscount_extensions).to_html
+</code></p>
+
+<p>修改为
+<code>ruby
+when 'rdiscount'
+  RDiscount.new(content.join_chinese, *@rdiscount_extensions).to_html
+</code></p>
+
+<p>是在格式转换之前将中文合并成一个段落，这样就不会产生多余的空格了</p>
+]]></content>
+  </entry>
+  
+</feed>

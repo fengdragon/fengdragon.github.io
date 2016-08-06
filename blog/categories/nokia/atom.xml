@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Nokia | Keep walking]]></title>
+  <link href="http://blog.ikumo.cf/blog/categories/nokia/atom.xml" rel="self"/>
+  <link href="http://blog.ikumo.cf/"/>
+  <updated>2014-03-19T09:54:17+09:00</updated>
+  <id>http://blog.ikumo.cf/</id>
+  <author>
+    <name><![CDATA[IM ikumo]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[在Nokia Lumia上使用docomo网络]]></title>
+    <link href="http://blog.ikumo.cf/blog/20130501/nokia-docomo/"/>
+    <updated>2013-05-01T20:55:00+09:00</updated>
+    <id>http://blog.ikumo.cf/blog/20130501/nokia-docomo</id>
+    <content type="html"><![CDATA[<p>之前介绍了购买的大诺基亚撸妹儿820，因为是港版无锁的，按道理日本的小卡插进去是可以使用的，但在使用过程中还是遇到了一些小困难。</p>
+
+<p>一直以来都是使用Softbank的网络，后来续约时发现乗り換え到别的公司异常的划算，于是跳到了现在的docomo门下，并选用了4G网络。但是把卡插进去后怎么都提示说找不到网络，四处google找日文帮助后才发现，据说的4G版撸妹儿手机也分区域和版本的。但对应各种密码进去，都能看到LTE band，可就是找不到4G网络。</p>
+
+<p>后来还是通过一个日本Geek友的提醒，要使用日本docomo sim卡的网络，必须在docomo开通某个服务，意思是只通过sim卡即可访问docomo的网络服务，否则的话只能通过机卡合一来使用，通过docomo的online服务，两三分钟后就可以了。。不得不说 小日本好变态阿</p>
+
+<p>PS：再吐槽下，docomo的4G服务也不怎么好用，速度确实很快，可太不稳定，
+820的电池又禁不起自我吐槽，我只好禁掉4G，只用3G.....</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[nokia 820]]></title>
+    <link href="http://blog.ikumo.cf/blog/20130429/nokia-820/"/>
+    <updated>2013-04-29T23:12:00+09:00</updated>
+    <id>http://blog.ikumo.cf/blog/20130429/nokia-820</id>
+    <content type="html"><![CDATA[<p>入手Nokia 820也有一段时间了，关于使用上略总结了一二</p>
+
+<p>首先是920和820的选择上，很显然的是920的显示屏和拍照功能要强大不少，不过920无法更换后壳。个人日常毫无拍照的习惯，即使拍的时候会使用单反或者微单。相反，能多换壳的820反而更合我意，因此从香港托朋友带来了一款820，骚黄色。</p>
+
+<p>好用的地方就不必多说了，</p>
+
+<ol>
+<li>很赚眼球，骚黄骚黄</li>
+<li>手感很好，后盖圆滑方便手握</li>
+<li>声音上有人说有爆音，但我用着还一切正常</li>
+<li>联系人的导入出乎意料方便，从iphone上直接传的过来，个人很在意通讯录，好友圈什么的在云端存储，总感觉你的活动范围和好友被一览无疑，所以能用PC或者直传的就不用云端传输。</li>
+</ol>
+
+
+<p>当然不好用的地方也是有的：</p>
+
+<ol>
+<li>电量。必须要提的是电量。。频繁用起来一日一冲都不能满足的节奏，若是能有再大点的电池就好了</li>
+<li>应用。应用略少，而且功能不全。。</li>
+<li>后盖真心不好掰开</li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>

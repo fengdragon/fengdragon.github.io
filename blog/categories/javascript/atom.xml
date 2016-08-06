@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Javascript | Keep walking]]></title>
+  <link href="http://blog.ikumo.cf/blog/categories/javascript/atom.xml" rel="self"/>
+  <link href="http://blog.ikumo.cf/"/>
+  <updated>2014-03-19T09:54:17+09:00</updated>
+  <id>http://blog.ikumo.cf/</id>
+  <author>
+    <name><![CDATA[IM ikumo]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[如何得到隐藏块的高度值]]></title>
+    <link href="http://blog.ikumo.cf/blog/20130430/how-to-get-height-of-hidden-element/"/>
+    <updated>2013-04-30T17:09:00+09:00</updated>
+    <id>http://blog.ikumo.cf/blog/20130430/how-to-get-height-of-hidden-element</id>
+    <content type="html"><![CDATA[<p>好久没有写日志，最近发现表达能力和记忆力严重下降，还是有机会就写一些把～</p>
+
+<p>刚开始学习javascript，要用到一个收起展开的特效，刚打开网页是默认应该是收起的，如果用户对其表示有兴趣，可以点击进行打开，问题就在于默认收起<code>display: none</code>的时候取它的高度总是为零</p>
+
+<p><code>js
+h = document.getElementById(element).offsetHeight;
+</code></p>
+
+<p>查阅了相关的js和jquery，有人使用jquery的clone函数，先是复制了一下，测到高度后再remove，理论上应该是没有问题的，可在我的页面是总提示
+<code>html
+can not call method 'clone' of null
+</code></p>
+
+<p>先让我歇会儿。。。后续再更</p>
+]]></content>
+  </entry>
+  
+</feed>

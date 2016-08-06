@@ -1,0 +1,829 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Keep walking</title>
+  <meta name="author" content="IM ikumo">
+
+  
+  <meta name="description" content="My personal blog at IKUMO.im, for the code and life.">
+  <meta name="keywords" content="tech, ikumo, octopress, coding, js, life, blog, travel">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.ikumo.cf/blog/page/6/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+  <script src="/javascripts/html5.js" type="text/javascript"></script>
+  <![endif]-->
+  <link href="/atom.xml" rel="alternate" title="Keep walking" type="application/atom+xml">
+  
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-37149880-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+<script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(100660546); }catch(e){}</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100660546ns.gif" /></p></noscript>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Keep walking</a></h1>
+  
+  <nav role="navigation"><ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/slides/">Slides</a></li>
+  <li><a href="/gallery/">Photos</a></li>
+</ul>
+
+</nav>
+  <div class="clearfix"></div>
+</hgroup>
+
+</header>
+  <div id="main">
+    <div id="content">
+      <div id="main-col" class="alignleft">
+    <div class="blog-index">
+      
+      
+      
+        <article>
+          <div class="article-content">
+    
+      <header>
+        <div class="icon"></div>
+        
+          <p class="meta">
+            
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2013-02-20T17:18:00+09:00" pubdate data-updated="true"><a>2013-02-20 Wed</a></time>
+            
+             | <a href="/blog/20130220/debian-x11vnc-installation/#disqus_thread">Comments</a>
+            
+          </p>
+        
+        
+          <h1 class="entry-title"><a href="/blog/20130220/debian-x11vnc-installation/">Install X11vnc on Debian and Autostart</a></h1>
+        
+      </header>
+    
+    
+      <div class="entry-content"><p>经常出门开会不能呆在学校主机旁边，时不时需要远程登录，而且需要图形界面，所以一时闲来搞个vnc</p>
+
+<ul>
+<li>安装x11vnc在debian</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install x11vnc
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>安装好后可以执行x11vnc看下输出信息</p>
+
+<ul>
+<li>安装client在laptop</li>
+</ul>
+
+
+<p>在随身携带的电脑上安装vnc viewer，我在用windows_7 64bit，下载的Realvnc
+VNC Viewer for Windows(5.0.4).</p>
+
+<p>安装好后就可以尝试登录主机了</p>
+
+</div>
+      
+      
+        <footer>
+          <a rel="full-article" href="/blog/20130220/debian-x11vnc-installation/">Read on &rarr;</a>
+        </footer>
+      
+    
+</div>
+
+        </article>
+      
+      
+        <article>
+          <div class="article-content">
+    
+      <header>
+        <div class="icon"></div>
+        
+          <p class="meta">
+            
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2013-02-14T17:32:00+09:00" pubdate data-updated="true"><a>2013-02-14 Thu</a></time>
+            
+             | <a href="/blog/20130214/add-watermark-to-a-video/#disqus_thread">Comments</a>
+            
+          </p>
+        
+        
+          <h1 class="entry-title"><a href="/blog/20130214/add-watermark-to-a-video/">Add Watermark to a Video</a></h1>
+        
+      </header>
+    
+    
+      <div class="entry-content"><p>This article explains how to add a watermark image to a video file
+using FFmpeg (www.ffmpeg.org). Typically a watermark is used to
+protect ownership/credit of the video and for Marketing/Branding
+the video with a Logo.
+One of the most common areas where watermarks appear is the
+bottom right hand corner of a video.
+I’m going to cover all four corners, since these are generally
+the ideal placements for watermarks.</p>
+
+<p>FFmpeg is a free software / open source project that produces
+libraries and programs for handling multimedia such as video.
+Many of it developers also are part of the MPlayer project.
+Primarily this project is geared towards Linux OS, however,
+much of it has been ported over to work with Windows 32bit and 64bit.
+FFmpeg is being utilized in a number of software applications;
+including web applications such as PHPmotion (www.phpmotion.com).
+Not only does it provide handy tools, it also provided
+extremely useful features and functionality that
+can be added to a variety of software applications.</p>
+</div>
+      
+      
+    
+</div>
+
+        </article>
+      
+      
+        <article>
+          <div class="article-content">
+    
+      <header>
+        <div class="icon"></div>
+        
+          <p class="meta">
+            
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2013-02-03T14:22:00+09:00" pubdate data-updated="true"><a>2013-02-03 Sun</a></time>
+            
+             | <a href="/blog/20130203/octopress-on-debian/#disqus_thread">Comments</a>
+            
+          </p>
+        
+        
+          <h1 class="entry-title"><a href="/blog/20130203/octopress-on-debian/">Octopress on Debian</a></h1>
+        
+      </header>
+    
+    
+      <div class="entry-content"><p>Recently, I moved all my works and envir. to a new HP desktop,
+with all new monitors and keyboard(HHKB pro 2 type-s, it&#8217;s so cool!)!!!</p>
+
+<p>and to continue my blog in Octopress, I have to re-install it in the new
+machine, here is just some notes:</p>
+
+<ul>
+<li><p>install git</p></li>
+<li><p>install rbenv</p></li>
+</ul>
+
+
+<p>Actually I have no idea what&#8217;s the <code>rbenv</code>..</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd</span> ~
+</span><span class='line'>git clone git@github.com:sstephenson/rbenv.git .rbenv
+</span><span class='line'><span class="nb">echo</span> <span class="s1">&#39;export PATH=&quot;$HOME/.rbenv/bin:$PATH&quot;&#39;</span> &gt;&gt; ~/.bashrc
+</span><span class='line'><span class="nb">echo</span> <span class="s1">&#39;eval &quot;$(rbenv init -)&quot;&#39;</span> &gt;&gt; ~/.bashrc
+</span><span class='line'>git clone git@github.com:sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+</span><span class='line'><span class="nb">source</span> ~/.bashrc
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>then install ruby and refresh</li>
+</ul>
+
+
+<p>the default version of ruby could be 1.9.1 in debian 6.0.6</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rbenv install 1.9.3-p194
+</span><span class='line'>rbenv rehash
+</span><span class='line'>rbenv global 1.9.3-p194
+</span><span class='line'>ruby --version
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>install octopress</li>
+</ul>
+
+
+<p>do it according to the instruction from website and backup your posts</p>
+</div>
+      
+      
+    
+</div>
+
+        </article>
+      
+      
+        <article>
+          <div class="article-content">
+    
+      <header>
+        <div class="icon"></div>
+        
+          <p class="meta">
+            
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2013-02-01T16:33:00+09:00" pubdate data-updated="true"><a>2013-02-01 Fri</a></time>
+            
+             | <a href="/blog/20130201/install-opengazer-with-debian-6-dot-0-6-amd64/#disqus_thread">Comments</a>
+            
+          </p>
+        
+        
+          <h1 class="entry-title"><a href="/blog/20130201/install-opengazer-with-debian-6-dot-0-6-amd64/">Install Opengazer With Debian 6.0.6-amd64</a></h1>
+        
+      </header>
+    
+    
+      <div class="entry-content"><p>写之前不能不再吐槽下自己反复造轮子。。</p>
+
+<p>新买了一个台式机，就想着把自己的东西都干净的转移过来，每次都配置安装些必须的软件花好长时间,
+这次还是安装opengazer，比意向中安装要顺利了许多。。难道是换了64位机?</p>
+
+<ul>
+<li>准备环境</li>
+</ul>
+
+
+<p>因为安装后面要用到vxl，而vxl会生成libmpeg2-4的文件，所以一开始要卸掉libmpeg2-4</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get remove libmpeg2-4
+</span><span class='line'>sudo apt-get remove libmpeg2-4-dev
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>之后安装些必备的包</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo apt-get install libcv-dev libhighgui-dev libcvaux-dev libgtkmm-2.4-dev libcairomm-1.0-dev libboost-dev
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>下载vxl-1.14.0</li>
+</ul>
+
+
+<p>官网上写的是1.8，一些博文也是建议使用低版本的vxl，但此次安装使用的1.14，也安装通过了。</p>
+
+<p>vxl的安装比较另类点，要自己手工配置build文件夹，我的如下（vxl-src：/home/ikumo/vxl-1.14.0）</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>mkdir /home/ikumo/vxl-1.14-build
+</span><span class='line'><span class="nb">cd</span> /home/ikumo/vxl-1.14-build
+</span><span class='line'>ccmake ../vxl-1.14.0
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>ccmake</code>需要cmake-gui，如果没有的话也可以用<code>cmake -i</code>,
+选项里enable <code>SHARED_LIBS</code>，配置通过后<code>generate</code>,之后<code>make</code>,
+<code>sudo make install</code>就可以了。</p>
+
+<p>以往每次<code>make</code>的时候报许多错，头疼的要命，这次只有一两个不疼不痒，没记住什么错根本就。。</p>
+
+<ul>
+<li>下载opengazer</li>
+</ul>
+
+
+<p>下载解压git initial,编辑它的<code>Makefile</code>文件，将<code>VXLDIR</code>改成vxl路径，如<code>/home/ikumo/vxl-1.14-build/</code>,连接必须的动态库到<code>/usr/local/include</code>
+里面去</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd</span> /usr/local/include
+</span><span class='line'>sudo ln -s vxl/core/vnl/ .
+</span><span class='line'>sudo ln -s vxl/core/vgl/ .
+</span><span class='line'>sudo ln -s vxl/core/ .
+</span><span class='line'>sudo ln -s vxl/vcl/ .
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>之后进入opengazer执行<code>make</code>，一般中间会蹦出一个exception的错误，根据提示找到源代码里的文件将其改成<code>std::exception</code>就可以编译通过。</p>
+
+<ul>
+<li>运行</li>
+</ul>
+
+
+<p>make通过生成了可以执行的opengazer，执行起来却报错：无法找到shared object,
+一般是因为环境变量没有VXL LIB的信息，export一下即可</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">export </span><span class="nv">VXLDIR</span><span class="o">=</span>/usr/local/include/vxl
+</span><span class='line'><span class="nb">export </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$VXLDIR</span>/lib:<span class="nv">$LD_LIBRARY_PATH</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>到这里 应该就没什么大问题了</p>
+</div>
+      
+      
+    
+</div>
+
+        </article>
+      
+      
+        <article>
+          <div class="article-content">
+    
+      <header>
+        <div class="icon"></div>
+        
+          <p class="meta">
+            
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2013-01-30T15:04:00+09:00" pubdate data-updated="true"><a>2013-01-30 Wed</a></time>
+            
+             | <a href="/blog/20130130/dual-boost-with-windows-8-and-debian/#disqus_thread">Comments</a>
+            
+          </p>
+        
+        
+          <h1 class="entry-title"><a href="/blog/20130130/dual-boost-with-windows-8-and-debian/">Windows 8 & Debian 双启动</a></h1>
+        
+      </header>
+    
+    
+      <div class="entry-content"><p>win 8 and Debian,
+Dual boost &#8230; tbd</p>
+</div>
+      
+      
+    
+</div>
+
+        </article>
+      
+      
+        <article>
+          <div class="article-content">
+    
+      <header>
+        <div class="icon"></div>
+        
+          <p class="meta">
+            
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2013-01-24T22:12:00+09:00" pubdate data-updated="true"><a>2013-01-24 Thu</a></time>
+            
+             | <a href="/blog/20130124/octopress-we-were-unable-to-load-disqus/#disqus_thread">Comments</a>
+            
+          </p>
+        
+        
+          <h1 class="entry-title"><a href="/blog/20130124/octopress-we-were-unable-to-load-disqus/">Octopress: We Were Unable to Load Disqus</a></h1>
+        
+      </header>
+    
+    
+      <div class="entry-content"><p>最近闲着手头无聊，看着日剧选了一个.im的域名，手一贱，点了下paypal支付没想到就入了,因为原想着paypal里面没有余额，本来只想点下支付看它会报什么错误，次奥啊&#8230;不过也就8.99刀&#8230;</p>
+
+<p>书归正传，既然入了域名，就换呗，几百年没有更新的github Page也折腾起来，
+DNS换完，github加了CNAME文件，睡了一觉搬家完成，但发现disqus不能用了总是显示</p>
+
+<blockquote><p> DISQUS seems to be taking longer than usual.
+ We were unable to load Disqus. If you are a moderator please see our
+ troubleshooting guide.</p></blockquote>
+
+<p>在网上搜了一下，翻出来都是两年前的帖子，于是自己看了下源代码，在我生成的某个post里disqus的代码是这样的</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">disqus_shortname</span> <span class="o">=</span> <span class="s1">&#39;ikumo-shortname&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="c1">// var disqus_developer = 1;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">disqus_identifier</span> <span class="o">=</span> <span class="s1">&#39;ikumo.im/blog/2013/01/08/a-letter-to-daughter/&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">disqus_url</span> <span class="o">=</span> <span class="s1">&#39;ikumo.im/blog/2013/01/08/a-letter-to-daughter/&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">disqus_script</span> <span class="o">=</span> <span class="s1">&#39;embed.js&#39;</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">dsq</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span> <span class="nx">dsq</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s1">&#39;text/javascript&#39;</span><span class="p">;</span> <span class="nx">dsq</span><span class="p">.</span><span class="nx">async</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>  <span class="nx">dsq</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">&#39;http://&#39;</span> <span class="o">+</span> <span class="nx">disqus_shortname</span> <span class="o">+</span> <span class="s1">&#39;.disqus.com/&#39;</span> <span class="o">+</span> <span class="nx">disqus_script</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;head&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">||</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">dsq</span><span class="p">);</span>
+</span><span class='line'><span class="p">}());</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>感觉没有明显错误,查看octorpress里
+<code>\source\_includes\disqus.html</code>信息</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">disqus_shortname</span> <span class="o">=</span> <span class="s1">&#39;ikumo-shortname&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="o">%</span> <span class="k">if</span> <span class="nx">page</span><span class="p">.</span><span class="nx">comments</span> <span class="o">==</span> <span class="kc">true</span> <span class="o">%</span>
+</span><span class='line'><span class="o">%</span> <span class="nx">comment</span> <span class="o">%</span> <span class="err">`</span><span class="nx">page</span><span class="p">.</span><span class="nx">comments</span><span class="err">`</span> <span class="nx">can</span> <span class="nx">be</span> <span class="nx">only</span> <span class="nx">be</span> <span class="nx">set</span> <span class="nx">to</span> <span class="kc">true</span> <span class="nx">on</span> <span class="nx">pages</span><span class="o">/</span><span class="nx">posts</span><span class="p">,</span> <span class="nx">so</span> <span class="nx">we</span> <span class="nx">embed</span> <span class="nx">the</span> <span class="nx">comments</span> <span class="nx">here</span><span class="p">.</span> <span class="o">%</span> <span class="nx">endcomment</span> <span class="o">%</span>
+</span><span class='line'>    <span class="c1">// var disqus_developer = 1;</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">disqus_identifier</span> <span class="o">=</span> <span class="s1">&#39;http://blog.ikumo.cf/blog/20130124/octopress-we-were-unable-to-load-disqus/&#39;</span><span class="p">;</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">disqus_url</span> <span class="o">=</span> <span class="s1">&#39;http://blog.ikumo.cf/blog/20130124/octopress-we-were-unable-to-load-disqus/&#39;</span><span class="p">;</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">disqus_script</span> <span class="o">=</span> <span class="s1">&#39;embed.js&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="o">%</span> <span class="k">else</span> <span class="o">%</span>
+</span><span class='line'>    <span class="o">%</span> <span class="nx">comment</span> <span class="o">%</span> <span class="nx">As</span> <span class="err">`</span><span class="nx">page</span><span class="p">.</span><span class="nx">comments</span><span class="err">`</span> <span class="nx">is</span> <span class="nx">empty</span><span class="p">,</span> <span class="nx">we</span> <span class="nx">must</span> <span class="nx">be</span> <span class="nx">on</span> <span class="nx">the</span> <span class="nx">index</span> <span class="nx">page</span><span class="p">.</span> <span class="o">%</span> <span class="nx">endcomment</span> <span class="o">%</span>
+</span><span class='line'>    <span class="c1">// var disqus_script = &#39;count.js&#39;;</span>
+</span><span class='line'>  <span class="o">%</span> <span class="nx">endif</span> <span class="o">%</span>
+</span><span class='line'><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">dsq</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span> <span class="nx">dsq</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s1">&#39;text/javascript&#39;</span><span class="p">;</span> <span class="nx">dsq</span><span class="p">.</span><span class="nx">async</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>  <span class="nx">dsq</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">&#39;http://&#39;</span> <span class="o">+</span> <span class="nx">disqus_shortname</span> <span class="o">+</span> <span class="s1">&#39;.disqus.com/&#39;</span> <span class="o">+</span> <span class="nx">disqus_script</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;head&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">||</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">dsq</span><span class="p">);</span>
+</span><span class='line'><span class="p">}());</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>仿照disqus里的example将function里<code>disqus_script</code>注释掉，直接使用字符串<code>embed.js</code>再重新generate和deploy就可以了,
+目测是没有评论时<code>count.js</code>出错。</p>
+</div>
+      
+      
+    
+</div>
+
+        </article>
+      
+      
+        <article>
+          <div class="article-content">
+    
+      <header>
+        <div class="icon"></div>
+        
+          <p class="meta">
+            
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2013-01-08T21:17:00+09:00" pubdate data-updated="true"><a>2013-01-08 Tue</a></time>
+            
+             | <a href="/blog/20130108/a-letter-to-daughter/#disqus_thread">Comments</a>
+            
+          </p>
+        
+        
+          <h1 class="entry-title"><a href="/blog/20130108/a-letter-to-daughter/">给女儿的一封信</a></h1>
+        
+      </header>
+    
+    
+      <div class="entry-content"><p>(zt)It&#8217;s one letter written to my daughter</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s2">&quot;./love&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">a_letter</span> <span class="n">to</span><span class="p">:</span> <span class="no">Augusta</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">twas</span><span class="p">(</span><span class="n">only</span><span class="p">:</span> <span class="mi">16</span><span class="o">.</span><span class="n">months</span><span class="o">.</span><span class="n">ago</span><span class="p">)</span> <span class="p">{</span> <span class="no">The</span><span class="o">::</span><span class="no">Universe</span> <span class="o">&lt;&lt;</span> <span class="no">You</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="no">OurFamily</span><span class="p">)</span> <span class="p">}</span>
+</span><span class='line'>  <span class="n">life</span><span class="o">.</span><span class="n">has</span> <span class="ss">:been</span> <span class="o">=&gt;</span> <span class="sx">%w(i n c r e d i b l y)</span><span class="o">.</span><span class="n">zip</span><span class="p">(</span><span class="o">*</span><span class="s2">&quot;wonderful!&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ever_since</span>
+</span><span class='line'>  <span class="no">We</span><span class="o">::</span><span class="no">Wish</span><span class="o">.</span><span class="n">we_could</span> <span class="p">{</span> <span class="n">experience</span> <span class="n">these_moments</span><span class="p">:</span> <span class="n">over</span> <span class="o">&amp;</span> <span class="n">over</span> <span class="p">}</span>
+</span><span class='line'>  <span class="no">You</span><span class="o">.</span><span class="n">will</span> <span class="n">always_be</span><span class="p">:</span> <span class="no">Loved</span><span class="p">,</span> <span class="ow">and</span><span class="p">:</span> <span class="no">Cherished</span>
+</span><span class='line'>  <span class="k">until</span> <span class="no">Infinity</span><span class="o">.</span><span class="n">ends</span> <span class="k">do</span><span class="p">:</span> <span class="no">Forever</span><span class="o">.</span><span class="p">();</span> <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+      
+      
+    
+</div>
+
+        </article>
+      
+      <div class="pagination">
+        
+          <a class="prev" href="/blog/page/7/">&larr; Older</a>
+        
+        <a href="/blog/archives">Blog Archives</a>
+        
+        <a class="next" href="/blog/page/5/">Newer &rarr;</a>
+        
+        <div class="clearfix"></div>
+      </div>
+    </div>
+</div>
+<aside id="sidebar" class="alignright">
+  
+    
+<div class="search">
+    <form action="http://google.com/search" method="get">
+      <fieldset role="search">
+        <input type="hidden" name="q" value="site:blog.ikumo.cf" />
+        <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+      </fieldset>
+    </form>
+</div>
+
+<section>
+    <h1>Categories</h1>
+    <ul id="categories">
+        <li class='category'><a href='/blog/categories/dns/'>DNS (1)</a></li>
+<li class='category'><a href='/blog/categories/dairy/'>Dairy (12)</a></li>
+<li class='category'><a href='/blog/categories/debian/'>Debian (1)</a></li>
+<li class='category'><a href='/blog/categories/driver/'>Driver (3)</a></li>
+<li class='category'><a href='/blog/categories/essay/'>Essay (2)</a></li>
+<li class='category'><a href='/blog/categories/extjs/'>ExtJS (2)</a></li>
+<li class='category'><a href='/blog/categories/film/'>Film (1)</a></li>
+<li class='category'><a href='/blog/categories/fit/'>Fit (1)</a></li>
+<li class='category'><a href='/blog/categories/japan/'>Japan (4)</a></li>
+<li class='category'><a href='/blog/categories/javascript/'>Javascript (1)</a></li>
+<li class='category'><a href='/blog/categories/kindle/'>Kindle (1)</a></li>
+<li class='category'><a href='/blog/categories/linux/'>Linux (8)</a></li>
+<li class='category'><a href='/blog/categories/markdown/'>Markdown (1)</a></li>
+<li class='category'><a href='/blog/categories/math/'>Math (1)</a></li>
+<li class='category'><a href='/blog/categories/matlab/'>Matlab (1)</a></li>
+<li class='category'><a href='/blog/categories/nokia/'>Nokia (2)</a></li>
+<li class='category'><a href='/blog/categories/octopress/'>Octopress (7)</a></li>
+<li class='category'><a href='/blog/categories/opengazer/'>Opengazer (1)</a></li>
+<li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
+<li class='category'><a href='/blog/categories/read/'>Read (1)</a></li>
+<li class='category'><a href='/blog/categories/travel/'>Travel (4)</a></li>
+<li class='category'><a href='/blog/categories/vim/'>Vim (1)</a></li>
+<li class='category'><a href='/blog/categories/visa/'>Visa (2)</a></li>
+
+    </ul>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/20131011/talmudh-law/">塔木德财产分割算法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20131011/first-mvc-using-extjs-part-2/">ExtJS首个MVC应用入门 part 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20131009/first-mvc-using-extjs/">ExtJS首个MVC应用入门</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20131007/dns-configure/">DNS configure</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20131006/vim-tabbar-in-mac/">vim的Tabbar插件设置</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130813/galaxy-note-2/">Docomo Galaxy Note II 刷机及root</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130808/matlab-installation/">Matlab在debian/linux下的安装方法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130806/first-fit-time/">增肌塑性第一步 &#8212; 算</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130805/hiwifi/">极路由事件</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130802/matlab-theme/">Matlab主题更改</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130802/kindle-ebook-site/">Kindle书库 by Calibre2opds</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130731/postcard-or-memory/">你留下的是明信片，还是满满的回忆</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130730/australia-visa-application/">在东京申请澳大利亚商务签</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130729/libpperconnection/">Home目录下生成libpeerconnection.log的解决方法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130704/road-drive/">路上练习</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+<h1>Recent comments</h1>
+<script type="text/javascript" src="http://blog-ikumo.disqus.com/recent_comments_widget.js?num_items=15&hide_avatars=0&avatar_size=32&excerpt_length=200"></script>
+</section>
+<section>
+<h1>Link</h1>
+
+<ul>
+    <li>
+    <a href="http://www.google.com/">Google</a>
+    </li>
+    <li>
+    <a href="#">Tobe&#8230;</a>
+    </li>
+</ul>
+
+
+</section>
+
+  
+</aside>
+<div class="clearfix"></div>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><div class="alignLeft">
+  &copy; 2014 - IM ikumo -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</div>
+<div class="clearfix"></div>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'blog-ikumo';
+      
+        
+        // var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

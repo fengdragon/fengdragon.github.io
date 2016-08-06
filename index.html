@@ -1,1 +1,740 @@
-Hello World
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Keep walking</title>
+  <meta name="author" content="IM ikumo">
+
+  
+  <meta name="description" content="My personal blog at IKUMO.im, for the code and life.">
+  <meta name="keywords" content="tech, ikumo, octopress, coding, js, life, blog, travel">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.ikumo.cf/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+  <script src="/javascripts/html5.js" type="text/javascript"></script>
+  <![endif]-->
+  <link href="/atom.xml" rel="alternate" title="Keep walking" type="application/atom+xml">
+  
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-37149880-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+<script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(100660546); }catch(e){}</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100660546ns.gif" /></p></noscript>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Keep walking</a></h1>
+  
+  <nav role="navigation"><ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/slides/">Slides</a></li>
+  <li><a href="/gallery/">Photos</a></li>
+</ul>
+
+</nav>
+  <div class="clearfix"></div>
+</hgroup>
+
+</header>
+  <div id="main">
+    <div id="content">
+      <div id="main-col" class="alignleft">
+    <div class="blog-index">
+      
+      
+      
+        <article>
+          <div class="article-content">
+    
+      <header>
+        <div class="icon"></div>
+        
+          <p class="meta">
+            
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2013-10-11T20:29:00+09:00" pubdate data-updated="true"><a>2013-10-11 Fri</a></time>
+            
+             | <a href="/blog/20131011/talmudh-law/#disqus_thread">Comments</a>
+            
+          </p>
+        
+        
+          <h1 class="entry-title"><a href="/blog/20131011/talmudh-law/">塔木德财产分割算法</a></h1>
+        
+      </header>
+    
+    
+      <div class="entry-content"><p>古代犹太人中，精通律法的文士们被称作“拉比”，拉比们不仅研究犹太教律法，而且担任民事法庭的法官，进行民事案件的裁决。犹太教法典《塔木德》时代，拉比们就已经具备了出色的博弈论知识。诺贝尔经济学奖得主罗伯特奥曼在1985年发表的一篇论文里从一个小故事揭示了古代犹太人解决问题的智慧。</p>
+
+<h2>塔木德 - 妇女部 - 婚书卷</h2>
+
+<br />
+
+
+<p>“婚书”是古代犹太男子在结婚时给妻子的凭信，上边的一项重要内容是万一婚姻中止（死亡或是离婚），丈夫将赔偿妻子多少钱。此卷第十章第四节记载了一场财产纠纷。在这个案例中，一名富翁在婚书中向他的三位妻子许诺他死后将给大老婆100金币，二老婆200金币，小老婆300金币。可是等他死后人们清算遗产的时候，发现这名富翁撒谎了，他的财产不够600块，只有200块。那么这个时候他的三名妻子各应该分多少金币？如果是100块和300块，又该怎么分配。这个时候拉比们规定的财产分配表如下：</p>
+
+<table>
+<tr>
+    <td></td>
+    <td>大老婆</td>
+    <td>二老婆</td>
+    <td>小老婆</td>
+</tr>
+<tr>
+    <td>遗产为100块</td>
+    <td>33.3</td>
+    <td>33.3</td>
+    <td>33.3</td>
+<tr>
+<tr>
+    <td>遗产为200块</td>
+    <td>50</td>
+    <td>75</td>
+    <td>75</td>
+<tr>
+<tr>
+    <td>遗产为300块</td>
+    <td>50</td>
+    <td>100</td>
+    <td>150</td>
+<tr>
+</table>
+
+
+
+
+<br />
+
+
+
+
+</div>
+      
+      
+        <footer>
+          <a rel="full-article" href="/blog/20131011/talmudh-law/">Read on &rarr;</a>
+        </footer>
+      
+    
+</div>
+
+        </article>
+      
+      
+        <article>
+          <div class="article-content">
+    
+      <header>
+        <div class="icon"></div>
+        
+          <p class="meta">
+            
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2013-10-11T00:24:00+09:00" pubdate data-updated="true"><a>2013-10-11 Fri</a></time>
+            
+             | <a href="/blog/20131011/first-mvc-using-extjs-part-2/#disqus_thread">Comments</a>
+            
+          </p>
+        
+        
+          <h1 class="entry-title"><a href="/blog/20131011/first-mvc-using-extjs-part-2/">ExtJS首个MVC应用入门 Part 2</a></h1>
+        
+      </header>
+    
+    
+      <div class="entry-content"><p>在上一节里我们讨论了如何使用ExtJS架构一个Pandora style的应用。我们巩固了一遍MVC的体系结构，并将它应用在了有多个视图和模型的相对复杂的UI应用里面。在这一篇文章里，我们需要跳越应用视觉上的结构，通过使用<code>Ext.application</code>
+和<code>Viewport</code>类来深入的挖掘该如何设计和编写控制器与模型的代码。</p>
+
+<p>让我们开始吧！</p>
+
+<h1>定义我们的应用</h1>
+
+<hr />
+
+<br />
+
+
+<p>在ExtJS 3里面，程序的入口是以<code>Ext.onReady</code>方法为始的，并且开发人员需要时刻拿出应用程序的架构。但在ExtJS 4里，我们有类MVC的模式，该模式会在你创建应用时帮你得到最优的练习。</p>
+
+<p>使用新MVC包来创建应用需要你调用<code>Ext.application</code>方法来得到程序的入口。该方法会创建一个<code>Ext.app.Application</code>的实例，并会在页面准备好的时候唤起加载程序。它本质上在添加新功能的时候取代了<code>Ext.onReady</code>的必要性，比如自动创建viewport和建立起你的namespace。</p>
+
+<p><em>app/Application.js</em></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">Ext</span><span class="p">.</span><span class="nx">application</span><span class="p">({</span>
+</span><span class='line'>  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Pandora&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">autoCreateViewport</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">launch</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="c1">// This is fired as soon as the page is ready</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>上例中的<code>name</code>属性会促使程序建立一个新的命名空间，我们所有的视图，模型，存储器和控制器都存在于该空间里。通过设置<code>autoCreateViewport</code>为<code>true</code>，该框架会自动的按照“惯例”加载<code>app/view/Viewport.js</code>文件，在该文件里，需要有一个定义为<code>Pandora.view.Viewport</code>的类来匹配该文件中配置好的命名空间。</p>
+</div>
+      
+      
+    
+</div>
+
+        </article>
+      
+      
+        <article>
+          <div class="article-content">
+    
+      <header>
+        <div class="icon"></div>
+        
+          <p class="meta">
+            
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2013-10-09T20:59:00+09:00" pubdate data-updated="true"><a>2013-10-09 Wed</a></time>
+            
+             | <a href="/blog/20131009/first-mvc-using-extjs/#disqus_thread">Comments</a>
+            
+          </p>
+        
+        
+          <h1 class="entry-title"><a href="/blog/20131009/first-mvc-using-extjs/">ExtJS首个MVC应用入门</a></h1>
+        
+      </header>
+    
+    
+      <div class="entry-content"><p>应用程序的可扩展性，可维护性和灵活性主要取决于该程序体系结构的质量。不幸的是，它往往都被事后才被考虑到。概念验证和原型转变成大量大量的应用，而示例代码则被复制粘贴入了如此大量应用的基础程序。你估计也会想这么做，因为这是在工程伊始你可以预想到的最快的进度。</p>
+
+<p>但是，相比较于花费在未来维护，扩展和多次重构你的应用的时间上，这点节省下来的时间是微不足道的。遵循一定的约定和坚持在视图，模型，存储器以及控制器被执行前定义是实现一个坚实架构的较好的途径。在这篇文章里，我们将介绍一个较受欢迎的应用和讨论如何构筑用户界面来创建一个稳固的应用程序。</p>
+
+<h1>组织代码</h1>
+
+<hr />
+
+<br />  
+
+
+<p>应用程序的体系结构为与它相关的实际类和框架代码提供结构性和一致性。建立一个良好的体系会赋予应用程序许许多多重要的好处：</p>
+
+<ul>
+<li><p>每个你建立的应用都按相同的模式工作，所以学一通百，节省学习成本</p></li>
+<li><p>移植代码会变得很轻松，因为所有的应用的工作接口都一致</p></li>
+<li><p>你可以使用ExtJS build tool为产品用途创建自己程序的改进版</p></li>
+</ul>
+
+
+<p>在ExtJS 4里面，我们已经定义了一些你在创建应用时或许应该考虑遵循的&#8221;惯例&#8221;，最引人注目的当属统一的目录结构。这个简单的结构将所有的类保存在了app根目录下，该目录里包含了所需要的模型，视图，控制器和存储器的子目录。</p>
+
+<p>在ExtJS 4提供用户体验良好的如何架构你的应用程序的相关训练的同时，
+ExtJS也为用户留有自定义文件和类名的余裕。比如说，你可以决定是否要在你的项目里为控制器加入“Controller”的后缀，
+e.g. “Users”写成“UsersController”。在这种情况下，要记得始终向控制器文件和控制器类加入相同的后缀。最重要的是你要在开始编写你的应用前决定好你的“惯例”，并贯彻它。最后，当你能够调用一切你想使用的类的时候，我们强烈建议您在命名和文件结构上遵循我们的惯例，这将确保你可以使用我们的SDK tool得到优化好的版本。</p>
+
+</div>
+      
+      
+        <footer>
+          <a rel="full-article" href="/blog/20131009/first-mvc-using-extjs/">Read on &rarr;</a>
+        </footer>
+      
+    
+</div>
+
+        </article>
+      
+      
+        <article>
+          <div class="article-content">
+    
+      <header>
+        <div class="icon"></div>
+        
+          <p class="meta">
+            
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2013-10-07T12:25:00+09:00" pubdate data-updated="true"><a>2013-10-07 Mon</a></time>
+            
+             | <a href="/blog/20131007/dns-configure/#disqus_thread">Comments</a>
+            
+          </p>
+        
+        
+          <h1 class="entry-title"><a href="/blog/20131007/dns-configure/">DNS Configure</a></h1>
+        
+      </header>
+    
+    
+      <div class="entry-content"><p>域名搭起来有一段时间了，但对域名设置，A记录/CNAME记录，还有DNS Server还不是很熟悉。集中时间调查了一下，而且现在身在墙外，为了墙内墙外的访问速度，现重新配置了一下</p>
+
+<ul>
+<li><p>域名一</p>
+
+<p>在domainmonster购买的，主要做自己的博客和小程序用，
+主要给自己看，偶尔面向国内和国外的ITer们，流量几乎可以忽视，
+因此用的cloudfare，但不起用CDN。cloudfare的确会被国内的DNS卡，
+DNSPod里的某域名用CNAME记录指向被cloudfare解析后的域名时就会报错，
+但把CDN关掉后就可以了。</p></li>
+<li><p>域名二</p>
+
+<p>godaddy购买的，com结尾，虽然名字不是特别好，但和自己常用的id相通，
+犹豫半天还是买了下来，为了以后给自己做个门面。
+该域名内容还没做，但以后终究是要用起来的，况且是作为自己的官方主站，
+因为国内外的访问速度和收录就必须要考虑起来。
+目前打算是DnsPod+Incapsula配合来做</p></li>
+<li><p>域名三</p>
+
+<p>godaddy购买，他人用的商务站，推广和使用都在美帝，因此不存在备案的后顾之忧，
+但考虑到偶尔需要国内人的访问和关注，也是用的DnsPod+Incapsula来做</p></li>
+</ul>
+
+</div>
+      
+      
+    
+</div>
+
+        </article>
+      
+      
+        <article>
+          <div class="article-content">
+    
+      <header>
+        <div class="icon"></div>
+        
+          <p class="meta">
+            
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2013-10-06T18:53:00+09:00" pubdate data-updated="true"><a>2013-10-06 Sun</a></time>
+            
+             | <a href="/blog/20131006/vim-tabbar-in-mac/#disqus_thread">Comments</a>
+            
+          </p>
+        
+        
+          <h1 class="entry-title"><a href="/blog/20131006/vim-tabbar-in-mac/">vim的Tabbar插件设置</a></h1>
+        
+      </header>
+    
+    
+      <div class="entry-content"><p>vim的Tabbar插件可以迅速的在已打开的文件中切换，但最近在Mac的Terminal里使用vim的时候，Alt+NUM键并不能迅速切换。</p>
+
+<p>只能修改Tabbar.vim的源码来enable这个功能，</p>
+
+<p>将下面的代码</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>noremap &lt;unique&gt; &lt;script&gt; ± :call &lt;SID&gt;Bf_SwitchTo<span class="o">(</span> 1<span class="o">)</span>&lt;CR&gt;:&lt;BS&gt;
+</span><span class='line'>noremap &lt;unique&gt; &lt;script&gt; ² :call &lt;SID&gt;Bf_SwitchTo<span class="o">(</span> 2<span class="o">)</span>&lt;CR&gt;:&lt;BS&gt;
+</span><span class='line'>noremap &lt;unique&gt; &lt;script&gt; ³ :call &lt;SID&gt;Bf_SwitchTo<span class="o">(</span> 3<span class="o">)</span>&lt;CR&gt;:&lt;BS&gt;
+</span><span class='line'>noremap &lt;unique&gt; &lt;script&gt; ´ :call &lt;SID&gt;Bf_SwitchTo<span class="o">(</span> 4<span class="o">)</span>&lt;CR&gt;:&lt;BS&gt;
+</span><span class='line'>noremap &lt;unique&gt; &lt;script&gt; µ :call &lt;SID&gt;Bf_SwitchTo<span class="o">(</span> 5<span class="o">)</span>&lt;CR&gt;:&lt;BS&gt;
+</span><span class='line'>noremap &lt;unique&gt; &lt;script&gt; ¶ :call &lt;SID&gt;Bf_SwitchTo<span class="o">(</span> 6<span class="o">)</span>&lt;CR&gt;:&lt;BS&gt;
+</span><span class='line'>noremap &lt;unique&gt; &lt;script&gt; · :call &lt;SID&gt;Bf_SwitchTo<span class="o">(</span> 7<span class="o">)</span>&lt;CR&gt;:&lt;BS&gt;
+</span><span class='line'>noremap &lt;unique&gt; &lt;script&gt; ¸ :call &lt;SID&gt;Bf_SwitchTo<span class="o">(</span> 8<span class="o">)</span>&lt;CR&gt;:&lt;BS&gt;
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>改成下面的</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>noremap &lt;unique&gt; &lt;script&gt; ¡ :call &lt;SID&gt;Bf_SwitchTo<span class="o">(</span> 1<span class="o">)</span>&lt;CR&gt;:&lt;BS&gt;
+</span><span class='line'>noremap &lt;unique&gt; &lt;script&gt; ™ :call &lt;SID&gt;Bf_SwitchTo<span class="o">(</span> 2<span class="o">)</span>&lt;CR&gt;:&lt;BS&gt;
+</span><span class='line'>noremap &lt;unique&gt; &lt;script&gt; £ :call &lt;SID&gt;Bf_SwitchTo<span class="o">(</span> 3<span class="o">)</span>&lt;CR&gt;:&lt;BS&gt;
+</span><span class='line'>noremap &lt;unique&gt; &lt;script&gt; ¢ :call &lt;SID&gt;Bf_SwitchTo<span class="o">(</span> 4<span class="o">)</span>&lt;CR&gt;:&lt;BS&gt;
+</span><span class='line'>noremap &lt;unique&gt; &lt;script&gt; ¢ :call &lt;SID&gt;Bf_SwitchTo<span class="o">(</span> 5<span class="o">)</span>&lt;CR&gt;:&lt;BS&gt;
+</span><span class='line'>noremap &lt;unique&gt; &lt;script&gt; ∞ :call &lt;SID&gt;Bf_SwitchTo<span class="o">(</span> 6<span class="o">)</span>&lt;CR&gt;:&lt;BS&gt;
+</span><span class='line'>noremap &lt;unique&gt; &lt;script&gt; ¶ :call &lt;SID&gt;Bf_SwitchTo<span class="o">(</span> 7<span class="o">)</span>&lt;CR&gt;:&lt;BS&gt;
+</span><span class='line'>noremap &lt;unique&gt; &lt;script&gt; • :call &lt;SID&gt;Bf_SwitchTo<span class="o">(</span> 8<span class="o">)</span>&lt;CR&gt;:&lt;BS&gt;
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>在保存的时候还会出现错误，要使用命令<code>:w ++enc=utf-8</code>来。</p>
+</div>
+      
+      
+    
+</div>
+
+        </article>
+      
+      
+        <article>
+          <div class="article-content">
+    
+      <header>
+        <div class="icon"></div>
+        
+          <p class="meta">
+            
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2013-08-13T19:57:00+09:00" pubdate data-updated="true"><a>2013-08-13 Tue</a></time>
+            
+             | <a href="/blog/20130813/galaxy-note-2/#disqus_thread">Comments</a>
+            
+          </p>
+        
+        
+          <h1 class="entry-title"><a href="/blog/20130813/galaxy-note-2/">Docomo Galaxy Note II 刷机及root</a></h1>
+        
+      </header>
+    
+    
+      <div class="entry-content"><p>生命在于折腾一点儿不假，感觉我的生活都在这些追求细节的小事儿上“虚度”过去了。</p>
+
+<p>好像是前天还是啥时候，Lumia 820的微信不支持推送了，我还是第一次出现这个问题，去搜了win8，微信推送后，看到好多哥们从去年或者一开始就有不推送的烦恼。我这还算幸运的。。。</p>
+
+<p>不推送按说没什么大问题，但关键我现在换在了docomo这，平时大家都不给我打电话了，然后只靠微信或者line来联系，这个时候不能推送的微信就不能忍了。于是我又想起来我放在家里的galaxy note II了。</p>
+
+</div>
+      
+      
+        <footer>
+          <a rel="full-article" href="/blog/20130813/galaxy-note-2/">Read on &rarr;</a>
+        </footer>
+      
+    
+</div>
+
+        </article>
+      
+      
+        <article>
+          <div class="article-content">
+    
+      <header>
+        <div class="icon"></div>
+        
+          <p class="meta">
+            
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2013-08-08T13:19:00+09:00" pubdate data-updated="true"><a>2013-08-08 Thu</a></time>
+            
+             | <a href="/blog/20130808/matlab-installation/#disqus_thread">Comments</a>
+            
+          </p>
+        
+        
+          <h1 class="entry-title"><a href="/blog/20130808/matlab-installation/">Matlab在debian/linux下的安装方法</a></h1>
+        
+      </header>
+    
+    
+      <div class="entry-content"><p>频发性的手贱，上周一时贪爽，从Debian 6升级到了wheezy，结果运行是挺正常的，但ibus的输入候选框只能在大窗口的左下。比如说我用ibus的中文输入法在terminal里用vim写日志，如果我把terminal全屏，就看不到中文输入的候选项。。。网页也一样，在地址栏或者搜索栏输入的时候，中日文的候选框也经常跑到整个浏览器的最下左方。同时更重要的是以前编译过的程序跑不起来。。。于是我只能再退回去了，而退回去也没有什么好法子，就是格掉/分区，然后保留/home分区重装了一下。</p>
+
+</div>
+      
+      
+        <footer>
+          <a rel="full-article" href="/blog/20130808/matlab-installation/">Read on &rarr;</a>
+        </footer>
+      
+    
+</div>
+
+        </article>
+      
+      <div class="pagination">
+        
+          <a class="prev" href="/blog/page/2/">&larr; Older</a>
+        
+        <a href="/blog/archives">Blog Archives</a>
+        
+        <div class="clearfix"></div>
+      </div>
+    </div>
+</div>
+<aside id="sidebar" class="alignright">
+  
+    
+<div class="search">
+    <form action="http://google.com/search" method="get">
+      <fieldset role="search">
+        <input type="hidden" name="q" value="site:blog.ikumo.cf" />
+        <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+      </fieldset>
+    </form>
+</div>
+
+<section>
+    <h1>Categories</h1>
+    <ul id="categories">
+        <li class='category'><a href='/blog/categories/dns/'>DNS (1)</a></li>
+<li class='category'><a href='/blog/categories/dairy/'>Dairy (12)</a></li>
+<li class='category'><a href='/blog/categories/debian/'>Debian (1)</a></li>
+<li class='category'><a href='/blog/categories/driver/'>Driver (3)</a></li>
+<li class='category'><a href='/blog/categories/essay/'>Essay (2)</a></li>
+<li class='category'><a href='/blog/categories/extjs/'>ExtJS (2)</a></li>
+<li class='category'><a href='/blog/categories/film/'>Film (1)</a></li>
+<li class='category'><a href='/blog/categories/fit/'>Fit (1)</a></li>
+<li class='category'><a href='/blog/categories/japan/'>Japan (4)</a></li>
+<li class='category'><a href='/blog/categories/javascript/'>Javascript (1)</a></li>
+<li class='category'><a href='/blog/categories/kindle/'>Kindle (1)</a></li>
+<li class='category'><a href='/blog/categories/linux/'>Linux (8)</a></li>
+<li class='category'><a href='/blog/categories/markdown/'>Markdown (1)</a></li>
+<li class='category'><a href='/blog/categories/math/'>Math (1)</a></li>
+<li class='category'><a href='/blog/categories/matlab/'>Matlab (1)</a></li>
+<li class='category'><a href='/blog/categories/nokia/'>Nokia (2)</a></li>
+<li class='category'><a href='/blog/categories/octopress/'>Octopress (7)</a></li>
+<li class='category'><a href='/blog/categories/opengazer/'>Opengazer (1)</a></li>
+<li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
+<li class='category'><a href='/blog/categories/read/'>Read (1)</a></li>
+<li class='category'><a href='/blog/categories/travel/'>Travel (4)</a></li>
+<li class='category'><a href='/blog/categories/vim/'>Vim (1)</a></li>
+<li class='category'><a href='/blog/categories/visa/'>Visa (2)</a></li>
+
+    </ul>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/20131011/talmudh-law/">塔木德财产分割算法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20131011/first-mvc-using-extjs-part-2/">ExtJS首个MVC应用入门 part 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20131009/first-mvc-using-extjs/">ExtJS首个MVC应用入门</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20131007/dns-configure/">DNS configure</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20131006/vim-tabbar-in-mac/">vim的Tabbar插件设置</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130813/galaxy-note-2/">Docomo Galaxy Note II 刷机及root</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130808/matlab-installation/">Matlab在debian/linux下的安装方法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130806/first-fit-time/">增肌塑性第一步 &#8212; 算</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130805/hiwifi/">极路由事件</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130802/matlab-theme/">Matlab主题更改</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130802/kindle-ebook-site/">Kindle书库 by Calibre2opds</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130731/postcard-or-memory/">你留下的是明信片，还是满满的回忆</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130730/australia-visa-application/">在东京申请澳大利亚商务签</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130729/libpperconnection/">Home目录下生成libpeerconnection.log的解决方法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130704/road-drive/">路上练习</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+<h1>Recent comments</h1>
+<script type="text/javascript" src="http://blog-ikumo.disqus.com/recent_comments_widget.js?num_items=15&hide_avatars=0&avatar_size=32&excerpt_length=200"></script>
+</section>
+<section>
+<h1>Link</h1>
+
+<ul>
+    <li>
+    <a href="http://www.google.com/">Google</a>
+    </li>
+    <li>
+    <a href="#">Tobe&#8230;</a>
+    </li>
+</ul>
+
+
+</section>
+
+  
+</aside>
+<div class="clearfix"></div>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><div class="alignLeft">
+  &copy; 2014 - IM ikumo -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</div>
+<div class="clearfix"></div>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'blog-ikumo';
+      
+        
+        // var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

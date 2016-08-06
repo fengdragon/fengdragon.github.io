@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Docomo Galaxy Note II 刷机及root - Keep walking</title>
+  <meta name="author" content="IM ikumo">
+
+  
+  <meta name="description" content="to root and install custom ROM on Docomo Galaxy Note II.">
+  <meta name="keywords" content="Docomo, Galaxy note II, ikumo, Japan, root">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.ikumo.cf/blog/20130813/galaxy-note-2/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+  <script src="/javascripts/html5.js" type="text/javascript"></script>
+  <![endif]-->
+  <link href="/atom.xml" rel="alternate" title="Keep walking" type="application/atom+xml">
+  
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-37149880-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+<script src="//static.getclicky.com/js" type="text/javascript"></script>
+<script type="text/javascript">try{ clicky.init(100660546); }catch(e){}</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100660546ns.gif" /></p></noscript>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Keep walking</a></h1>
+  
+  <nav role="navigation"><ul class="main-navigation">
+  <li><a href="/">Home</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/slides/">Slides</a></li>
+  <li><a href="/gallery/">Photos</a></li>
+</ul>
+
+</nav>
+  <div class="clearfix"></div>
+</hgroup>
+
+</header>
+  <div id="main">
+    <div id="content">
+      <div id="main-col" class="alignleft">
+    <div class="blog-main">
+        <article class="hentry" role="article">
+          <div class="article-content">
+    
+      <header>
+        <div class="icon"></div>
+        
+          <p class="meta">
+            
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2013-08-13T19:57:00+09:00" pubdate data-updated="true"><a>2013-08-13 Tue</a></time>
+            
+             | <a href="#disqus_thread">Comments</a>
+            
+          </p>
+        
+        
+          <h1 class="entry-title">Docomo Galaxy Note II 刷机及root</h1>
+        
+      </header>
+    
+    
+    <div class="entry-content"><p>生命在于折腾一点儿不假，感觉我的生活都在这些追求细节的小事儿上“虚度”过去了。</p>
+
+<p>好像是前天还是啥时候，Lumia 820的微信不支持推送了，我还是第一次出现这个问题，去搜了win8，微信推送后，看到好多哥们从去年或者一开始就有不推送的烦恼。我这还算幸运的。。。</p>
+
+<p>不推送按说没什么大问题，但关键我现在换在了docomo这，平时大家都不给我打电话了，然后只靠微信或者line来联系，这个时候不能推送的微信就不能忍了。于是我又想起来我放在家里的galaxy note II了。</p>
+
+<!-- more -->
+
+
+<p>Galaxy note II是当初办docomo时随卡选的机型，但这家伙个儿太大，比我半张脸都大让我怎么拿出去打电话阿，也是因此，当时让朋友在香港入手了820的。</p>
+
+<p>鉴于现在的win8系统处于半残废状态，我还是把note II再刷一下吧。note II的源rom是docomo定制的，一启动就会自己安装上好多docomo的服务app，看上去就烦人，而且你明明用不到还不能删，不舒服就给刷了它！想想我已经尝试刷它这是第三次了，而这一次终于用了一个晚上给搞定了。</p>
+
+<ul>
+<li><p>准备rom和root的镜像
+  Docomo的galaxy默认的启动模式是3e，
+  它的功能太弱，读入的rom包总提示签名验证不通过，
+  所以一定要刷个CWM的启动引导类似的东西。
+  刷上了它，就可以正常读取定制rom进行刷机了。
+  刷机用odin 3.x版本，软件和镜像我就没有贴上来，
+  思路有了，那些可以网上搜到的，
+  或者有人需要的话联系我也可以。</p></li>
+<li><p>刷入CWM的root镜像，印象里刷N7100是不管用的，
+  刷进去以后还是3e的启动项，读取sd卡的rom后
+  总是提示验证不通过，前两次就是云里雾里一直卡在这里。
+  一度怀疑是没有root权限，所以跨步刷了N7105的root文件，
+  结果固件不符，自此一直不断的重启，
+  完全已经绝望的时候，搜了一下关键字，才意外的发现了N7108的
+  cwm+root的镜像文件，刷进去以后居然好了！</p></li>
+<li><p>刷入定制的rom文件。
+  上一步完成后，进入恢复模式，就会看到CWM xxxx的抬头的引导系统，
+  进去wipe掉所有数据和缓存，
+  然后进去sd卡，选择之后拷好的rom文件，就可以等着安装了</p></li>
+<li><p>刷完基本就已经可以用了，
+  但我刷的固件貌似是国内哥们做的，hosts文件里没有google server的
+  解析，因此必须root掉系统，然后自己覆盖掉源固件里的hosts文件。
+  因此要执行一遍root。
+  在这个过程中，曾经试过用卓大师的一键root，事实证明是不管用的，
+  它的软件界面上说root成功，但重启后手机进入显示su升级失败，
+  还是要手动刷root文件靠谱。</p></li>
+<li><p>这时就可以收工了。自己设置好apn，装好软件，一切顺利。
+  至于能不能用其他公司的卡，还没有测试，暂按下不表。</p></li>
+</ul>
+
+
+<p>遇到的几个问题：</p>
+
+<ul>
+<li><p>微信不能推送，有人说取消掉系统时间的自动设置就可以，
+  但我在测试的时候完全不管用。</p></li>
+<li><p>三星使用odin刷机的时候卡在setup connection的时候
+  多是因为打开过三星官方的软件，占用了port口，
+  重启下电脑，换个usb口再让系统自己装下驱动就好了</p></li>
+<li><p>大热天的手里有个扇子能帮你冷静很多</p></li>
+</ul>
+
+</div>
+     <footer>
+       <p class="meta">
+         
+
+
+         
+
+<span class="categories">
+  Categories:
+  
+    <a class='category' href='/blog/categories/dairy/'>Dairy</a>, <a class='category' href='/blog/categories/japan/'>Japan</a>
+  
+</span>
+
+
+       </p>
+       <p class="meta">
+         
+           <a class="alignLeft" href="/blog/20130808/matlab-installation/" title="Previous Post: Matlab在debian/linux下的安装方法">&laquo; Matlab在debian/linux下的安装方法</a>
+         
+         
+           <a class="alignRight" href="/blog/20131006/vim-tabbar-in-mac/" title="Next Post: vim的Tabbar插件设置">vim的Tabbar插件设置 &raquo;</a>
+         
+       </p>
+     </footer>
+    
+</div>
+
+        </article>
+        
+          <section class="comments">
+              <div class="sharing">
+  
+
+  
+
+  
+
+  
+</div>
+
+          </section>
+        
+        
+          <section>
+            <h1>Comments</h1>
+            <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+          </section>
+        
+    </div>
+</div>
+
+<aside id="sidebar" class="alignright">
+  
+    
+<div class="search">
+    <form action="http://google.com/search" method="get">
+      <fieldset role="search">
+        <input type="hidden" name="q" value="site:blog.ikumo.cf" />
+        <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+      </fieldset>
+    </form>
+</div>
+
+<section>
+    <h1>Categories</h1>
+    <ul id="categories">
+        <li class='category'><a href='/blog/categories/dns/'>DNS (1)</a></li>
+<li class='category'><a href='/blog/categories/dairy/'>Dairy (12)</a></li>
+<li class='category'><a href='/blog/categories/debian/'>Debian (1)</a></li>
+<li class='category'><a href='/blog/categories/driver/'>Driver (3)</a></li>
+<li class='category'><a href='/blog/categories/essay/'>Essay (2)</a></li>
+<li class='category'><a href='/blog/categories/extjs/'>ExtJS (2)</a></li>
+<li class='category'><a href='/blog/categories/film/'>Film (1)</a></li>
+<li class='category'><a href='/blog/categories/fit/'>Fit (1)</a></li>
+<li class='category'><a href='/blog/categories/japan/'>Japan (4)</a></li>
+<li class='category'><a href='/blog/categories/javascript/'>Javascript (1)</a></li>
+<li class='category'><a href='/blog/categories/kindle/'>Kindle (1)</a></li>
+<li class='category'><a href='/blog/categories/linux/'>Linux (8)</a></li>
+<li class='category'><a href='/blog/categories/markdown/'>Markdown (1)</a></li>
+<li class='category'><a href='/blog/categories/math/'>Math (1)</a></li>
+<li class='category'><a href='/blog/categories/matlab/'>Matlab (1)</a></li>
+<li class='category'><a href='/blog/categories/nokia/'>Nokia (2)</a></li>
+<li class='category'><a href='/blog/categories/octopress/'>Octopress (7)</a></li>
+<li class='category'><a href='/blog/categories/opengazer/'>Opengazer (1)</a></li>
+<li class='category'><a href='/blog/categories/python/'>Python (1)</a></li>
+<li class='category'><a href='/blog/categories/read/'>Read (1)</a></li>
+<li class='category'><a href='/blog/categories/travel/'>Travel (4)</a></li>
+<li class='category'><a href='/blog/categories/vim/'>Vim (1)</a></li>
+<li class='category'><a href='/blog/categories/visa/'>Visa (2)</a></li>
+
+    </ul>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/20131011/talmudh-law/">塔木德财产分割算法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20131011/first-mvc-using-extjs-part-2/">ExtJS首个MVC应用入门 part 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20131009/first-mvc-using-extjs/">ExtJS首个MVC应用入门</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20131007/dns-configure/">DNS configure</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20131006/vim-tabbar-in-mac/">vim的Tabbar插件设置</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130813/galaxy-note-2/">Docomo Galaxy Note II 刷机及root</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130808/matlab-installation/">Matlab在debian/linux下的安装方法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130806/first-fit-time/">增肌塑性第一步 --- 算</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130805/hiwifi/">极路由事件</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130802/matlab-theme/">Matlab主题更改</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130802/kindle-ebook-site/">Kindle书库 by Calibre2opds</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130731/postcard-or-memory/">你留下的是明信片，还是满满的回忆</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130730/australia-visa-application/">在东京申请澳大利亚商务签</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130729/libpperconnection/">Home目录下生成libpeerconnection.log的解决方法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/20130704/road-drive/">路上练习</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+<h1>Recent comments</h1>
+<script type="text/javascript" src="http://blog-ikumo.disqus.com/recent_comments_widget.js?num_items=15&hide_avatars=0&avatar_size=32&excerpt_length=200"></script>
+</section>
+<section>
+<h1>Link</h1>
+
+<ul>
+    <li>
+    <a href="http://www.google.com/">Google</a>
+    </li>
+    <li>
+    <a href="#">Tobe...</a>
+    </li>
+</ul>
+
+
+</section>
+
+  
+</aside>
+
+<div class="clearfix"></div>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><div class="alignLeft">
+  &copy; 2014 - IM ikumo -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</div>
+<div class="clearfix"></div>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'blog-ikumo';
+      
+        
+        // var disqus_developer = 1;
+        // var disqus_identifier = 'http://blog.ikumo.cf/blog/20130813/galaxy-note-2/';
+        // var disqus_url = 'http://blog.ikumo.cf/blog/20130813/galaxy-note-2/';
+        // var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
