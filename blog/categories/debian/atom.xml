@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Debian | Keep walking]]></title>
   <link href="http://blog.ikumo.cf/blog/categories/debian/atom.xml" rel="self"/>
   <link href="http://blog.ikumo.cf/"/>
-  <updated>2014-03-19T09:54:17+09:00</updated>
+  <updated>2016-08-06T17:42:47+08:00</updated>
   <id>http://blog.ikumo.cf/</id>
   <author>
     <name><![CDATA[IM ikumo]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Install x11vnc on debian and autostart]]></title>
     <link href="http://blog.ikumo.cf/blog/20130220/debian-x11vnc-installation/"/>
-    <updated>2013-02-20T17:18:00+09:00</updated>
+    <updated>2013-02-20T17:18:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130220/debian-x11vnc-installation</id>
     <content type="html"><![CDATA[<p>经常出门开会不能呆在学校主机旁边，时不时需要远程登录，而且需要图形界面，所以一时闲来搞个vnc</p>
 

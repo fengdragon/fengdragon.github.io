@@ -2,224 +2,224 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://blog.ikumo.cf/blog/20121218/hello-world/</loc>
-        <lastmod>2013-10-03T23:23:03+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20121218/hello-world-chn/</loc>
-        <lastmod>2013-10-03T23:46:56+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20121219/how-to-set-up-dropbox-via-ssh-on-vps/</loc>
-        <lastmod>2013-10-03T23:31:37+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20121219/config-jekyll-via-ssh-on-vps/</loc>
-        <lastmod>2013-10-03T23:27:00+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130106/config-octopress-via-mac/</loc>
-        <lastmod>2013-10-03T23:33:33+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130108/a-letter-to-daughter/</loc>
-        <lastmod>2013-10-03T23:46:53+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130124/octopress-we-were-unable-to-load-disqus/</loc>
-        <lastmod>2013-10-03T23:47:45+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130130/dual-boost-with-windows-8-and-debian/</loc>
-        <lastmod>2013-10-03T23:42:40+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.ikumo.cf/blog/20130201/install-opengazer-with-debian-6-dot-0-6-amd64/
         </loc>
-        <lastmod>2013-10-03T23:45:29+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130203/octopress-on-debian/</loc>
-        <lastmod>2013-10-03T23:45:46+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130214/add-watermark-to-a-video/</loc>
-        <lastmod>2013-10-03T23:45:59+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130220/debian-x11vnc-installation/</loc>
-        <lastmod>2013-10-03T23:46:37+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130314/japan-article/</loc>
-        <lastmod>2013-06-03T23:56:18+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130328/travel-to-paris/</loc>
-        <lastmod>2013-06-06T23:21:07+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130426/driver-test-in-japan/</loc>
-        <lastmod>2013-06-26T15:39:34+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130429/nokia-820/</loc>
-        <lastmod>2013-06-07T23:56:10+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130430/how-to-get-height-of-hidden-element/</loc>
-        <lastmod>2013-06-03T23:56:18+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130501/thoughts-from-driver-learning/</loc>
-        <lastmod>2013-06-03T23:56:18+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130501/nokia-docomo/</loc>
-        <lastmod>2013-08-01T01:32:44+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130502/no-syntax-highlighting-when-i-sudo/</loc>
-        <lastmod>2013-06-03T23:56:18+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130503/chinese-br-in-markdown/</loc>
-        <lastmod>2013-06-03T23:56:18+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130529/sina-tuchuang/</loc>
-        <lastmod>2013-06-03T23:56:18+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130531/human-flesh-serch/</loc>
-        <lastmod>2013-06-03T23:56:18+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130531/presentation-test/</loc>
-        <lastmod>2013-10-01T00:26:46+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130531/gb2312-error/</loc>
-        <lastmod>2013-06-03T23:56:18+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130604/second-driver-test/</loc>
-        <lastmod>2013-06-04T23:56:06+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130606/national-college-entrance-exam/</loc>
-        <lastmod>2013-06-06T23:21:07+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130618/how-to-tell-story/</loc>
-        <lastmod>2013-06-18T22:48:05+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130626/ka-ri-men/</loc>
-        <lastmod>2013-06-26T16:16:55+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130701/humming-bird/</loc>
-        <lastmod>2013-07-03T21:31:14+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130702/gtalk-group-talk/</loc>
-        <lastmod>2013-08-01T01:32:44+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130702/austrilia-visa/</loc>
-        <lastmod>2013-07-03T21:31:14+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130704/road-drive/</loc>
-        <lastmod>2013-07-04T23:43:41+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130729/libpperconnection/</loc>
-        <lastmod>2013-07-30T21:52:20+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130730/australia-visa-application/</loc>
-        <lastmod>2013-10-03T23:56:28+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130731/postcard-or-memory/</loc>
-        <lastmod>2013-08-01T01:32:44+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130802/kindle-ebook-site/</loc>
-        <lastmod>2013-08-02T20:34:20+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130802/matlab-theme/</loc>
-        <lastmod>2013-08-02T20:34:20+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130805/hiwifi/</loc>
-        <lastmod>2013-08-06T00:08:50+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130806/first-fit-time/</loc>
-        <lastmod>2013-09-12T01:32:21+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130808/matlab-installation/</loc>
-        <lastmod>2013-09-12T01:32:21+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20130813/galaxy-note-2/</loc>
-        <lastmod>2013-09-12T01:32:21+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20131006/vim-tabbar-in-mac/</loc>
-        <lastmod>2013-10-06T19:06:51+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20131007/dns-configure/</loc>
-        <lastmod>2013-10-11T00:22:04+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20131009/first-mvc-using-extjs/</loc>
-        <lastmod>2013-10-11T12:19:20+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20131011/first-mvc-using-extjs-part-2/</loc>
-        <lastmod>2013-10-11T12:19:07+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/20131011/talmudh-law/</loc>
-        <lastmod>2014-02-01T21:34:14+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/blog/archives/</loc>
-        <lastmod>2014-02-01T21:34:14+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/feed/index.xml</loc>
-        <lastmod>2013-04-29T22:08:27+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/gallery/</loc>
-        <lastmod>2014-02-19T01:02:10+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/</loc>
-        <lastmod>2014-02-01T21:34:14+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/slides/book-list.html</loc>
-        <lastmod>2013-08-01T01:32:44+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/slides/dairy-note.html</loc>
-        <lastmod>2013-07-04T23:13:11+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/slides/</loc>
-        <lastmod>2014-02-01T21:34:14+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
     <url>
         <loc>http://blog.ikumo.cf/slides/my-first-slide.html</loc>
-        <lastmod>2013-05-31T02:12:18+09:00</lastmod>
+        <lastmod>2016-08-06T17:10:29+08:00</lastmod>
     </url>
 </urlset>

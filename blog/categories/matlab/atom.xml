@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Matlab | Keep walking]]></title>
   <link href="http://blog.ikumo.cf/blog/categories/matlab/atom.xml" rel="self"/>
   <link href="http://blog.ikumo.cf/"/>
-  <updated>2014-03-19T09:54:17+09:00</updated>
+  <updated>2016-08-06T17:42:47+08:00</updated>
   <id>http://blog.ikumo.cf/</id>
   <author>
     <name><![CDATA[IM ikumo]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Matlab主题更改]]></title>
     <link href="http://blog.ikumo.cf/blog/20130802/matlab-theme/"/>
-    <updated>2013-08-02T17:32:00+09:00</updated>
+    <updated>2013-08-02T17:32:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130802/matlab-theme</id>
     <content type="html"><![CDATA[<p>首先在Linux下面安装Matlab就费了九牛二虎之力，安好后总感觉界面刺眼，一直不想用，导致进度一拖再拖，现在一想，关于matlab的主题设置肯定也有类似Solarized的了。于是谷歌配置走起。</p>
 

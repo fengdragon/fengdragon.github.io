@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Vim | Keep walking]]></title>
   <link href="http://blog.ikumo.cf/blog/categories/vim/atom.xml" rel="self"/>
   <link href="http://blog.ikumo.cf/"/>
-  <updated>2014-03-19T09:54:17+09:00</updated>
+  <updated>2016-08-06T17:42:47+08:00</updated>
   <id>http://blog.ikumo.cf/</id>
   <author>
     <name><![CDATA[IM ikumo]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[vim的Tabbar插件设置]]></title>
     <link href="http://blog.ikumo.cf/blog/20131006/vim-tabbar-in-mac/"/>
-    <updated>2013-10-06T18:53:00+09:00</updated>
+    <updated>2013-10-06T18:53:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20131006/vim-tabbar-in-mac</id>
     <content type="html"><![CDATA[<p>vim的Tabbar插件可以迅速的在已打开的文件中切换，但最近在Mac的Terminal里使用vim的时候，Alt+NUM键并不能迅速切换。</p>
 

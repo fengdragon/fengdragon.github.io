@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Linux | Keep walking]]></title>
   <link href="http://blog.ikumo.cf/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://blog.ikumo.cf/"/>
-  <updated>2014-03-19T09:54:17+09:00</updated>
+  <updated>2016-08-06T17:42:47+08:00</updated>
   <id>http://blog.ikumo.cf/</id>
   <author>
     <name><![CDATA[IM ikumo]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Matlab在debian/linux下的安装方法]]></title>
     <link href="http://blog.ikumo.cf/blog/20130808/matlab-installation/"/>
-    <updated>2013-08-08T13:19:00+09:00</updated>
+    <updated>2013-08-08T13:19:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130808/matlab-installation</id>
     <content type="html"><![CDATA[<p>频发性的手贱，上周一时贪爽，从Debian 6升级到了wheezy，结果运行是挺正常的，但ibus的输入候选框只能在大窗口的左下。比如说我用ibus的中文输入法在terminal里用vim写日志，如果我把terminal全屏，就看不到中文输入的候选项。。。网页也一样，在地址栏或者搜索栏输入的时候，中日文的候选框也经常跑到整个浏览器的最下左方。同时更重要的是以前编译过的程序跑不起来。。。于是我只能再退回去了，而退回去也没有什么好法子，就是格掉/分区，然后保留/home分区重装了一下。</p>
 
@@ -72,7 +72,7 @@ sudo apt-get install libXp6
   <entry>
     <title type="html"><![CDATA[Matlab主题更改]]></title>
     <link href="http://blog.ikumo.cf/blog/20130802/matlab-theme/"/>
-    <updated>2013-08-02T17:32:00+09:00</updated>
+    <updated>2013-08-02T17:32:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130802/matlab-theme</id>
     <content type="html"><![CDATA[<p>首先在Linux下面安装Matlab就费了九牛二虎之力，安好后总感觉界面刺眼，一直不想用，导致进度一拖再拖，现在一想，关于matlab的主题设置肯定也有类似Solarized的了。于是谷歌配置走起。</p>
 
@@ -96,7 +96,7 @@ com.mathworks.services.Prefs.setColorPref('Colors_M_Strings',java.awt.Color(42/2
   <entry>
     <title type="html"><![CDATA[Home目录下生成libpeerconnection.log的解决方法]]></title>
     <link href="http://blog.ikumo.cf/blog/20130729/libpperconnection/"/>
-    <updated>2013-07-29T15:10:00+09:00</updated>
+    <updated>2013-07-29T15:10:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130729/libpperconnection</id>
     <content type="html"><![CDATA[<p>最近又手贱了一下，升级到了debian wheezy，各种配置文件有了大大小小的问题，不过突然发现chromium好用了一下，但和Monkey的某些script还是有冲突的存在。而且用着用着就发现用户目录下突然多出了一个libpeerconnection.log的临时文件，对于一个强迫症患者，这简直是令人抓狂的存在。你想，开机的默认目录就是用户目录，而第一个命令又大多是<code>ls</code>，天天瞅见这么一个空文件摆在那里。。。</p>
 
@@ -122,7 +122,7 @@ cd /tmp
   <entry>
     <title type="html"><![CDATA[sudo下为什么没有高亮]]></title>
     <link href="http://blog.ikumo.cf/blog/20130502/no-syntax-highlighting-when-i-sudo/"/>
-    <updated>2013-05-02T11:59:00+09:00</updated>
+    <updated>2013-05-02T11:59:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130502/no-syntax-highlighting-when-i-sudo</id>
     <content type="html"><![CDATA[<p>在使用linux的时候，总希望界面是有高亮的，最近在使用远程控制时，发现sudo下面vi没有高亮，这就仿佛一下从retina掉到了大马塞克黑白世界里，</p>
 
@@ -147,7 +147,7 @@ alias sudo='sudo '
   <entry>
     <title type="html"><![CDATA[Add watermark to a video]]></title>
     <link href="http://blog.ikumo.cf/blog/20130214/add-watermark-to-a-video/"/>
-    <updated>2013-02-14T17:32:00+09:00</updated>
+    <updated>2013-02-14T17:32:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130214/add-watermark-to-a-video</id>
     <content type="html"><![CDATA[<p>This article explains how to add a watermark image to a video file
 using FFmpeg (www.ffmpeg.org). Typically a watermark is used to

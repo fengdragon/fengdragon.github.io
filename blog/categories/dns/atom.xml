@@ -4,7 +4,7 @@
   <title><![CDATA[Category: DNS | Keep walking]]></title>
   <link href="http://blog.ikumo.cf/blog/categories/dns/atom.xml" rel="self"/>
   <link href="http://blog.ikumo.cf/"/>
-  <updated>2014-03-19T09:54:17+09:00</updated>
+  <updated>2016-08-06T17:42:47+08:00</updated>
   <id>http://blog.ikumo.cf/</id>
   <author>
     <name><![CDATA[IM ikumo]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[DNS configure]]></title>
     <link href="http://blog.ikumo.cf/blog/20131007/dns-configure/"/>
-    <updated>2013-10-07T12:25:00+09:00</updated>
+    <updated>2013-10-07T12:25:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20131007/dns-configure</id>
     <content type="html"><![CDATA[<p>域名搭起来有一段时间了，但对域名设置，A记录/CNAME记录，还有DNS Server还不是很熟悉。集中时间调查了一下，而且现在身在墙外，为了墙内墙外的访问速度，现重新配置了一下</p>
 

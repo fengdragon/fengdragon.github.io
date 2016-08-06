@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Keep walking]]></title>
   <link href="http://blog.ikumo.cf/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://blog.ikumo.cf/"/>
-  <updated>2014-03-19T09:54:17+09:00</updated>
+  <updated>2016-08-06T17:42:47+08:00</updated>
   <id>http://blog.ikumo.cf/</id>
   <author>
     <name><![CDATA[IM ikumo]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[GB2312 报错]]></title>
     <link href="http://blog.ikumo.cf/blog/20130531/gb2312-error/"/>
-    <updated>2013-05-31T17:40:00+09:00</updated>
+    <updated>2013-05-31T17:40:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130531/gb2312-error</id>
     <content type="html"><![CDATA[<p>造轮子真是毁人不倦阿，最近一直在调试Octopress，终于slides也可以用了，主题也比较满意了，这不，又折腾了一下午的win平台上的配置。</p>
 
@@ -40,7 +40,7 @@ set LC_ALL=zh_CN.UTF_8
   <entry>
     <title type="html"><![CDATA[Presentation test]]></title>
     <link href="http://blog.ikumo.cf/blog/20130531/presentation-test/"/>
-    <updated>2013-05-31T16:03:00+09:00</updated>
+    <updated>2013-05-31T16:03:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130531/presentation-test</id>
     <content type="html"><![CDATA[<p>只是简单测试下页面内部潜入slides而已</p>
 
@@ -53,7 +53,7 @@ set LC_ALL=zh_CN.UTF_8
   <entry>
     <title type="html"><![CDATA[Octopress on Debian]]></title>
     <link href="http://blog.ikumo.cf/blog/20130203/octopress-on-debian/"/>
-    <updated>2013-02-03T14:22:00+09:00</updated>
+    <updated>2013-02-03T14:22:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130203/octopress-on-debian</id>
     <content type="html"><![CDATA[<p>Recently, I moved all my works and envir. to a new HP desktop,
 with all new monitors and keyboard(HHKB pro 2 type-s, it's so cool!)!!!</p>
@@ -104,7 +104,7 @@ ruby --version
   <entry>
     <title type="html"><![CDATA[Octopress: We were unable to load Disqus]]></title>
     <link href="http://blog.ikumo.cf/blog/20130124/octopress-we-were-unable-to-load-disqus/"/>
-    <updated>2013-01-24T22:12:00+09:00</updated>
+    <updated>2013-01-24T22:12:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130124/octopress-we-were-unable-to-load-disqus</id>
     <content type="html"><![CDATA[<p>最近闲着手头无聊，看着日剧选了一个.im的域名，手一贱，点了下paypal支付没想到就入了,因为原想着paypal里面没有余额，本来只想点下支付看它会报什么错误，次奥啊...不过也就8.99刀...</p>
 
@@ -167,7 +167,7 @@ var disqus_script = 'embed.js';
   <entry>
     <title type="html"><![CDATA[在MAC上安装设置Octopress]]></title>
     <link href="http://blog.ikumo.cf/blog/20130106/config-octopress-via-mac/"/>
-    <updated>2013-01-06T00:57:00+09:00</updated>
+    <updated>2013-01-06T00:57:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130106/config-octopress-via-mac</id>
     <content type="html"><![CDATA[<p>I'm trying to use the new Mac at home,
 so I have to configure all thing up.</p>

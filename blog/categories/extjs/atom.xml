@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ExtJS | Keep walking]]></title>
   <link href="http://blog.ikumo.cf/blog/categories/extjs/atom.xml" rel="self"/>
   <link href="http://blog.ikumo.cf/"/>
-  <updated>2014-03-19T09:54:17+09:00</updated>
+  <updated>2016-08-06T17:42:47+08:00</updated>
   <id>http://blog.ikumo.cf/</id>
   <author>
     <name><![CDATA[IM ikumo]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[ExtJS首个MVC应用入门 part 2]]></title>
     <link href="http://blog.ikumo.cf/blog/20131011/first-mvc-using-extjs-part-2/"/>
-    <updated>2013-10-11T00:24:00+09:00</updated>
+    <updated>2013-10-11T00:24:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20131011/first-mvc-using-extjs-part-2</id>
     <content type="html"><![CDATA[<p>在上一节里我们讨论了如何使用ExtJS架构一个Pandora style的应用。我们巩固了一遍MVC的体系结构，并将它应用在了有多个视图和模型的相对复杂的UI应用里面。在这一篇文章里，我们需要跳越应用视觉上的结构，通过使用<code>Ext.application</code>
 和<code>Viewport</code>类来深入的挖掘该如何设计和编写控制器与模型的代码。</p>
@@ -57,7 +57,7 @@ launch: function() {
   <entry>
     <title type="html"><![CDATA[ExtJS首个MVC应用入门]]></title>
     <link href="http://blog.ikumo.cf/blog/20131009/first-mvc-using-extjs/"/>
-    <updated>2013-10-09T20:59:00+09:00</updated>
+    <updated>2013-10-09T20:59:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20131009/first-mvc-using-extjs</id>
     <content type="html"><![CDATA[<p>应用程序的可扩展性，可维护性和灵活性主要取决于该程序体系结构的质量。不幸的是，它往往都被事后才被考虑到。概念验证和原型转变成大量大量的应用，而示例代码则被复制粘贴入了如此大量应用的基础程序。你估计也会想这么做，因为这是在工程伊始你可以预想到的最快的进度。</p>
 

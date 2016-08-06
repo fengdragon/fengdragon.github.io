@@ -4,7 +4,7 @@
   <title><![CDATA[Keep walking]]></title>
   <link href="http://blog.ikumo.cf/atom.xml" rel="self"/>
   <link href="http://blog.ikumo.cf/"/>
-  <updated>2014-03-19T09:54:17+09:00</updated>
+  <updated>2016-08-06T17:42:47+08:00</updated>
   <id>http://blog.ikumo.cf/</id>
   <author>
     <name><![CDATA[IM ikumo]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[塔木德财产分割算法]]></title>
     <link href="http://blog.ikumo.cf/blog/20131011/talmudh-law/"/>
-    <updated>2013-10-11T20:29:00+09:00</updated>
+    <updated>2013-10-11T20:29:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20131011/talmudh-law</id>
     <content type="html"><![CDATA[<p>古代犹太人中，精通律法的文士们被称作“拉比”，拉比们不仅研究犹太教律法，而且担任民事法庭的法官，进行民事案件的裁决。犹太教法典《塔木德》时代，拉比们就已经具备了出色的博弈论知识。诺贝尔经济学奖得主罗伯特奥曼在1985年发表的一篇论文里从一个小故事揭示了古代犹太人解决问题的智慧。</p>
 
@@ -126,7 +126,7 @@
   <entry>
     <title type="html"><![CDATA[ExtJS首个MVC应用入门 part 2]]></title>
     <link href="http://blog.ikumo.cf/blog/20131011/first-mvc-using-extjs-part-2/"/>
-    <updated>2013-10-11T00:24:00+09:00</updated>
+    <updated>2013-10-11T00:24:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20131011/first-mvc-using-extjs-part-2</id>
     <content type="html"><![CDATA[<p>在上一节里我们讨论了如何使用ExtJS架构一个Pandora style的应用。我们巩固了一遍MVC的体系结构，并将它应用在了有多个视图和模型的相对复杂的UI应用里面。在这一篇文章里，我们需要跳越应用视觉上的结构，通过使用<code>Ext.application</code>
 和<code>Viewport</code>类来深入的挖掘该如何设计和编写控制器与模型的代码。</p>
@@ -172,7 +172,7 @@
   <entry>
     <title type="html"><![CDATA[ExtJS首个MVC应用入门]]></title>
     <link href="http://blog.ikumo.cf/blog/20131009/first-mvc-using-extjs/"/>
-    <updated>2013-10-09T20:59:00+09:00</updated>
+    <updated>2013-10-09T20:59:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20131009/first-mvc-using-extjs</id>
     <content type="html"><![CDATA[<p>应用程序的可扩展性，可维护性和灵活性主要取决于该程序体系结构的质量。不幸的是，它往往都被事后才被考虑到。概念验证和原型转变成大量大量的应用，而示例代码则被复制粘贴入了如此大量应用的基础程序。你估计也会想这么做，因为这是在工程伊始你可以预想到的最快的进度。</p>
 
@@ -295,7 +295,7 @@ ExtJS 4允许你使用一个控制器同时控制多个视图。我们的音乐�
   <entry>
     <title type="html"><![CDATA[DNS configure]]></title>
     <link href="http://blog.ikumo.cf/blog/20131007/dns-configure/"/>
-    <updated>2013-10-07T12:25:00+09:00</updated>
+    <updated>2013-10-07T12:25:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20131007/dns-configure</id>
     <content type="html"><![CDATA[<p>域名搭起来有一段时间了，但对域名设置，A记录/CNAME记录，还有DNS Server还不是很熟悉。集中时间调查了一下，而且现在身在墙外，为了墙内墙外的访问速度，现重新配置了一下</p>
 
@@ -326,7 +326,7 @@ DNSPod里的某域名用CNAME记录指向被cloudfare解析后的域名时就会
   <entry>
     <title type="html"><![CDATA[vim的Tabbar插件设置]]></title>
     <link href="http://blog.ikumo.cf/blog/20131006/vim-tabbar-in-mac/"/>
-    <updated>2013-10-06T18:53:00+09:00</updated>
+    <updated>2013-10-06T18:53:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20131006/vim-tabbar-in-mac</id>
     <content type="html"><![CDATA[<p>vim的Tabbar插件可以迅速的在已打开的文件中切换，但最近在Mac的Terminal里使用vim的时候，Alt+NUM键并不能迅速切换。</p>
 
@@ -381,7 +381,7 @@ DNSPod里的某域名用CNAME记录指向被cloudfare解析后的域名时就会
   <entry>
     <title type="html"><![CDATA[Docomo Galaxy Note II 刷机及root]]></title>
     <link href="http://blog.ikumo.cf/blog/20130813/galaxy-note-2/"/>
-    <updated>2013-08-13T19:57:00+09:00</updated>
+    <updated>2013-08-13T19:57:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130813/galaxy-note-2</id>
     <content type="html"><![CDATA[<p>生命在于折腾一点儿不假，感觉我的生活都在这些追求细节的小事儿上“虚度”过去了。</p>
 
@@ -445,7 +445,7 @@ DNSPod里的某域名用CNAME记录指向被cloudfare解析后的域名时就会
   <entry>
     <title type="html"><![CDATA[Matlab在debian/linux下的安装方法]]></title>
     <link href="http://blog.ikumo.cf/blog/20130808/matlab-installation/"/>
-    <updated>2013-08-08T13:19:00+09:00</updated>
+    <updated>2013-08-08T13:19:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130808/matlab-installation</id>
     <content type="html"><![CDATA[<p>频发性的手贱，上周一时贪爽，从Debian 6升级到了wheezy，结果运行是挺正常的，但ibus的输入候选框只能在大窗口的左下。比如说我用ibus的中文输入法在terminal里用vim写日志，如果我把terminal全屏，就看不到中文输入的候选项。。。网页也一样，在地址栏或者搜索栏输入的时候，中日文的候选框也经常跑到整个浏览器的最下左方。同时更重要的是以前编译过的程序跑不起来。。。于是我只能再退回去了，而退回去也没有什么好法子，就是格掉/分区，然后保留/home分区重装了一下。</p>
 
@@ -519,7 +519,7 @@ DNSPod里的某域名用CNAME记录指向被cloudfare解析后的域名时就会
   <entry>
     <title type="html"><![CDATA[增肌塑性第一步 --- 算]]></title>
     <link href="http://blog.ikumo.cf/blog/20130806/first-fit-time/"/>
-    <updated>2013-08-06T14:48:00+09:00</updated>
+    <updated>2013-08-06T14:48:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130806/first-fit-time</id>
     <content type="html"><![CDATA[<p>自打小以来，自己就偏消瘦，主要是手臂细，肩窄，背部胸部基本没有什么肌肉，可能由于体重轻，对肌肉的负担也不是太大，普通的体育运动还没有太大障碍，而且部分项目还颇为得意，但心肺功能自己也感到不足，心率容易过高，肌肉群基本没有，就不要提什么负重训练了。由此一想到以后连老婆都抱不起来就太桑心啦。</p>
 
@@ -642,7 +642,7 @@ DNSPod里的某域名用CNAME记录指向被cloudfare解析后的域名时就会
   <entry>
     <title type="html"><![CDATA[极路由事件]]></title>
     <link href="http://blog.ikumo.cf/blog/20130805/hiwifi/"/>
-    <updated>2013-08-05T15:02:00+09:00</updated>
+    <updated>2013-08-05T15:02:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130805/hiwifi</id>
     <content type="html"><![CDATA[<p>自2013年7月以来，极路由就吸引着极客圈以及大众的眼球，从他们官网<a href="http://www.hiwifi.com/category/market">市场动态</a>上就可以看出舆论为其造势颇大。一开始自己确实也动心想入一个，因为自己刷openwrt毕竟还是挺麻烦，而且给小白朋友们用，这么开箱即食的设备还是不错的。但继续看了官网，却没有发现什么真正有用的信息。。。请点击<a href="http://www.hiwifi.com/about">关于</a>，标题为<code>关于极路由</code>，下面的列表却是</p>
 
@@ -764,7 +764,7 @@ V2EX上有两个贴，分别是<a href="http://www.v2ex.com/t/77921">开篇</a>
   <entry>
     <title type="html"><![CDATA[Matlab主题更改]]></title>
     <link href="http://blog.ikumo.cf/blog/20130802/matlab-theme/"/>
-    <updated>2013-08-02T17:32:00+09:00</updated>
+    <updated>2013-08-02T17:32:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130802/matlab-theme</id>
     <content type="html"><![CDATA[<p>首先在Linux下面安装Matlab就费了九牛二虎之力，安好后总感觉界面刺眼，一直不想用，导致进度一拖再拖，现在一想，关于matlab的主题设置肯定也有类似Solarized的了。于是谷歌配置走起。</p>
 
@@ -794,7 +794,7 @@ V2EX上有两个贴，分别是<a href="http://www.v2ex.com/t/77921">开篇</a>
   <entry>
     <title type="html"><![CDATA[Kindle书库 by Calibre2opds]]></title>
     <link href="http://blog.ikumo.cf/blog/20130802/kindle-ebook-site/"/>
-    <updated>2013-08-02T14:18:00+09:00</updated>
+    <updated>2013-08-02T14:18:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130802/kindle-ebook-site</id>
     <content type="html"><![CDATA[<p>手上搜集着一些用于Kindle上的mobi格式的书籍，有时和朋友谈论起来，总是要互相分享或发送给对方，到那时再一个个找又费时又费力，不由得就想利用手头上能用的资源建起个网站来。</p>
 
@@ -839,7 +839,7 @@ calibre的数据库</p></li>
   <entry>
     <title type="html"><![CDATA[你留下的是明信片，还是满满的回忆]]></title>
     <link href="http://blog.ikumo.cf/blog/20130731/postcard-or-memory/"/>
-    <updated>2013-07-31T15:52:00+09:00</updated>
+    <updated>2013-07-31T15:52:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130731/postcard-or-memory</id>
     <content type="html"><![CDATA[<p>活到25这个不尴不尬的年纪，上做不了大叔，下扮不了学弟，唯一能拿出手的也就是在同龄人中略丰富的游历，但回头想想，却又什么都没留下来。自己去过的，知道的也不过是网络上都能看到的风光，故此时此刻，说不懊悔是自欺欺人的。可能也是自己有了这种觉悟，慢慢懒得外出，费钱费时间而已。</p>
 
@@ -863,7 +863,7 @@ calibre的数据库</p></li>
   <entry>
     <title type="html"><![CDATA[在东京申请澳大利亚商务签]]></title>
     <link href="http://blog.ikumo.cf/blog/20130730/australia-visa-application/"/>
-    <updated>2013-07-30T22:01:00+09:00</updated>
+    <updated>2013-07-30T22:01:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130730/australia-visa-application</id>
     <content type="html"><![CDATA[<h4>在东京办理澳大利亚之签证攻略</h4>
 
@@ -932,7 +932,7 @@ calibre的数据库</p></li>
   <entry>
     <title type="html"><![CDATA[Home目录下生成libpeerconnection.log的解决方法]]></title>
     <link href="http://blog.ikumo.cf/blog/20130729/libpperconnection/"/>
-    <updated>2013-07-29T15:10:00+09:00</updated>
+    <updated>2013-07-29T15:10:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130729/libpperconnection</id>
     <content type="html"><![CDATA[<p>最近又手贱了一下，升级到了debian wheezy，各种配置文件有了大大小小的问题，不过突然发现chromium好用了一下，但和Monkey的某些script还是有冲突的存在。而且用着用着就发现用户目录下突然多出了一个libpeerconnection.log的临时文件，对于一个强迫症患者，这简直是令人抓狂的存在。你想，开机的默认目录就是用户目录，而第一个命令又大多是<code>ls</code>，天天瞅见这么一个空文件摆在那里。。。</p>
 
@@ -963,7 +963,7 @@ calibre的数据库</p></li>
   <entry>
     <title type="html"><![CDATA[路上练习]]></title>
     <link href="http://blog.ikumo.cf/blog/20130704/road-drive/"/>
-    <updated>2013-07-04T23:17:00+09:00</updated>
+    <updated>2013-07-04T23:17:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130704/road-drive</id>
     <content type="html"><![CDATA[<p>いろいろ路上练习终于开始了，果然还是特么的紧张。最终的路上考试是有三条路径的，所以一般的练习都选在这三条路上，能熟悉路面状况，也有利于通过最终路考。于是今天我就来到其中的一条コース，让教练陪着上路练习了</p>
 
@@ -989,7 +989,7 @@ calibre的数据库</p></li>
   <entry>
     <title type="html"><![CDATA[申请澳洲签证]]></title>
     <link href="http://blog.ikumo.cf/blog/20130702/austrilia-visa/"/>
-    <updated>2013-07-02T20:08:00+09:00</updated>
+    <updated>2013-07-02T20:08:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130702/austrilia-visa</id>
     <content type="html"><![CDATA[<p>申请了9月份去墨尔本的旅行，作为天朝子民，第一步当然是去办签证，在网上查看了澳洲大使馆的说明，乖乖，还不如美国面签呢，澳洲大使馆在东京的办事处没有签证部，访问签证必须要寄去首尔，而所有证件都还不能寄去原件，只能在东京的办事处花钱做了认证后，把认证的复印件和所有的材料寄过去。</p>
 
@@ -1007,7 +1007,7 @@ calibre的数据库</p></li>
   <entry>
     <title type="html"><![CDATA[gtalk group talk]]></title>
     <link href="http://blog.ikumo.cf/blog/20130702/gtalk-group-talk/"/>
-    <updated>2013-07-02T14:32:00+09:00</updated>
+    <updated>2013-07-02T14:32:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130702/gtalk-group-talk</id>
     <content type="html"><![CDATA[<p>近来在小组沟通交流的时候，急切的感觉需要一个公共平台来共享附近的生活娱乐信息，一开始是使用esoTalk在openshift上面搭了个小型论坛，用起来很简单就是了，但发现用的人不是很多，于是又转入了IM的阵营里。用QQ大部分时候群消息都会被屏蔽，而且公司或研究室都禁止使用QQ的，后来发现大家都使用gmail以及gtalk，于是便打算建个gtalk的讨论组。</p>
 
@@ -1034,7 +1034,7 @@ google gtalk当然还是放在自己的GAE平台上跑的比较欢，虽然GAE�
   <entry>
     <title type="html"><![CDATA[观[蜂鸟]后感]]></title>
     <link href="http://blog.ikumo.cf/blog/20130701/humming-bird/"/>
-    <updated>2013-07-01T16:26:00+09:00</updated>
+    <updated>2013-07-01T16:26:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130701/humming-bird</id>
     <content type="html"><![CDATA[<p>晚来无聊，刷了下电影新榜，看到肌肉男杰森出了新片，名为[蜂鸟]，看完后毫无感觉，只能说我对这个肌肉男的自我救赎的文艺片丝毫不感冒。。。</p>
 
@@ -1049,7 +1049,7 @@ google gtalk当然还是放在自己的GAE平台上跑的比较欢，虽然GAE�
   <entry>
     <title type="html"><![CDATA[仮免許の技能試験]]></title>
     <link href="http://blog.ikumo.cf/blog/20130626/ka-ri-men/"/>
-    <updated>2013-06-26T16:01:00+09:00</updated>
+    <updated>2013-06-26T16:01:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130626/ka-ri-men</id>
     <content type="html"><![CDATA[<p>今日は4回目の仮免許の技能試験を受けるために、府中運転免許試験場に来た。練習も含めて、4回目の府中試験場である。。</p>
 
@@ -1137,7 +1137,7 @@ OKなら、シートをあわせて、ルームミラーを手で触って確認
   <entry>
     <title type="html"><![CDATA[我不会讲故事]]></title>
     <link href="http://blog.ikumo.cf/blog/20130618/how-to-tell-story/"/>
-    <updated>2013-06-18T22:45:00+09:00</updated>
+    <updated>2013-06-18T22:45:00+08:00</updated>
     <id>http://blog.ikumo.cf/blog/20130618/how-to-tell-story</id>
     <content type="html"><![CDATA[<p>我不会讲故事我不会讲故事我不会讲故事我不会讲故事我不会讲故事我不会讲故事我不会讲故事我不会讲故事我不会讲故事我不会讲故事我不会讲故事我不会讲故事我不会讲故事我不会讲故事我不会讲故事我不会讲故事</p>
 
