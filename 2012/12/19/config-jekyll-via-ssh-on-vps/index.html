@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Keep Walking, IT" />
+  <meta name="keywords" content="jekyll, ssh, VPS, install, ikumo.im" />
 
 
 
@@ -84,19 +84,16 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="How to install jekyll on VPS via ssh log-in">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://blog.ifengdragon.com/2016/08/07/hello-world/index.html">
+<meta property="og:title" content="ssh登录远程主机安装jekyll">
+<meta property="og:url" content="http://blog.ifengdragon.com/2012/12/19/config-jekyll-via-ssh-on-vps/index.html">
 <meta property="og:site_name" content="Keep Walking">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-08-06T16:15:15.676Z">
+<meta property="og:description" content="How to install jekyll on VPS via ssh log-in">
+<meta property="og:updated_time" content="2016-08-07T09:16:31.528Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="ssh登录远程主机安装jekyll">
+<meta name="twitter:description" content="How to install jekyll on VPS via ssh log-in">
 
 
 
@@ -117,9 +114,9 @@ Quick">
 
 
 
-  <link rel="canonical" href="http://blog.ifengdragon.com/2016/08/07/hello-world/"/>
+  <link rel="canonical" href="http://blog.ifengdragon.com/2012/12/19/config-jekyll-via-ssh-on-vps/"/>
 
-  <title> Hello World | Keep Walking </title>
+  <title> ssh登录远程主机安装jekyll | Keep Walking </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -238,7 +235,7 @@ Quick">
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-tags " itemscope itemtype="http://schema.org/Article">
 
     
       <header class="post-header">
@@ -249,7 +246,7 @@ Quick">
             
             
               
-                Hello World
+                ssh登录远程主机安装jekyll
               
             
           </h1>
@@ -261,11 +258,30 @@ Quick">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-07T00:15:15+08:00" content="2016-08-07">
-              2016-08-07
+            <time itemprop="dateCreated" datetime="2012-12-19T15:51:00+08:00" content="2012-12-19">
+              2012-12-19
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -289,15 +305,35 @@ Quick">
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>继在服务器端安装好dropbox之后，<br>我们需要安装静态网页生成器<code>jekyll</code>，</p>
+<p>首先要确认下服务器的系统型号，以方便是使用<code>yum</code>还是<code>apt-get</code>，</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">uname <span class="_">-a</span></div><div class="line">head -n 1 /etc/issue</div></pre></td></tr></table></figure>
+<p>本次安装是在fedora之上，以下所有命令基于fedora。</p>
+<ul>
+<li><p>首先要确认你有没有安装curl, git</p>
+</li>
+<li><p>然后安装RVM</p>
+</li>
+</ul>
+<p>我们要用到bash</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bash &lt; &lt;(curl <span class="_">-s</span> https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)</div></pre></td></tr></table></figure>
+<p>如果命令前不带sudo，会安装到~/.rvm/ 只供当前用户使用</p>
+<ul>
+<li>安装ruby</li>
+</ul>
+<p>可以查看可以安装的版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rvm list known</div></pre></td></tr></table></figure>
+<p>可以选择要安装的版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rvm install 1.9.3</div></pre></td></tr></table></figure>
+<p>如果有多ruby系统，还可以切换</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rvm --default use <span class="number">1.9</span>.<span class="number">2</span>-p18<span class="number">0</span></div></pre></td></tr></table></figure>
+<ul>
+<li>最后安装jekyll</li>
+</ul>
+<p>使用gem install</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gem install jekyll</div></pre></td></tr></table></figure>
+<p>中途遇到<code>gem install</code>error，是因为<code>zlib</code>出错，解决办法可以为</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">rvm pkg install zlib</div><div class="line">rvm reinstall <span class="number">1.9</span>.<span class="number">2</span></div></pre></td></tr></table></figure>
 
       
     </div>
@@ -318,18 +354,32 @@ Quick">
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag">#Linux</a>
+          
+            <a href="/tags/ssh/" rel="tag">#ssh</a>
+          
+            <a href="/tags/jekyll/" rel="tag">#jekyll</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2012/12/19/config-jekyll-via-ssh-on-vps/" rel="next" title="ssh登录远程主机安装jekyll">
-                <i class="fa fa-chevron-left"></i> ssh登录远程主机安装jekyll
+              <a href="/2012/12/18/2012-12-18-hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/08/07/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -454,7 +504,7 @@ Quick">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
