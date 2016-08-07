@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="octopress, first, hello world, blog.ikumo.im" />
+  <meta name="keywords" content="Octopress, disqus, ikumo.im, unable, load" />
 
 
 
@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="Hello World">
+<meta name="description" content="we were unable to load Disqus on Octopress, ikumo.im, disqus">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://blog.ifengdragon.com/2012/12/18/2012-12-18-hello-world/index.html">
+<meta property="og:title" content="We were unable to load Disqus via Octopress">
+<meta property="og:url" content="http://blog.ifengdragon.com/2013/01/24/octopress-we-were-unable-to-load-disqus/index.html">
 <meta property="og:site_name" content="Keep Walking">
-<meta property="og:description" content="Hello World">
-<meta property="og:updated_time" content="2016-08-07T08:45:17.207Z">
+<meta property="og:description" content="we were unable to load Disqus on Octopress, ikumo.im, disqus">
+<meta property="og:updated_time" content="2016-08-07T09:42:05.687Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Hello World">
+<meta name="twitter:title" content="We were unable to load Disqus via Octopress">
+<meta name="twitter:description" content="we were unable to load Disqus on Octopress, ikumo.im, disqus">
 
 
 
@@ -114,9 +114,9 @@
 
 
 
-  <link rel="canonical" href="http://blog.ifengdragon.com/2012/12/18/2012-12-18-hello-world/"/>
+  <link rel="canonical" href="http://blog.ifengdragon.com/2013/01/24/octopress-we-were-unable-to-load-disqus/"/>
 
-  <title> Hello World | Keep Walking </title>
+  <title> We were unable to load Disqus via Octopress | Keep Walking </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -235,7 +235,7 @@
   
   
 
-  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
       <header class="post-header">
@@ -246,7 +246,7 @@
             
             
               
-                Hello World
+                We were unable to load Disqus via Octopress
               
             
           </h1>
@@ -258,11 +258,30 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-12-18T19:18:00+08:00" content="2012-12-18">
-              2012-12-18
+            <time itemprop="dateCreated" datetime="2013-01-24T22:12:00+08:00" content="2013-01-24">
+              2013-01-24
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Octopress/" itemprop="url" rel="index">
+                    <span itemprop="name">Octopress</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -286,8 +305,16 @@
       
 
       
-        <p>Hello World!</p>
-<p>This is my first post via Hexo.</p>
+        <p>最近闲着手头无聊，看着日剧选了一个.im的域名，<br>手一贱，点了下paypal支付没想到就入了,因为原想着paypal里面没有<br>余额，本来只想点下支付看它会报什么错误，次奥啊…不过也就8.99刀…</p>
+<p>书归正传，既然入了域名，就换呗，<br>几百年没有更新的github Page也折腾起来，<br>DNS换完，github加了CNAME文件，睡了一觉搬家完成，但发现disqus不能用了<br>总是显示</p>
+<blockquote>
+<p> DISQUS seems to be taking longer than usual.<br> We were unable to load Disqus. If you are a moderator please see our<br> troubleshooting guide.</p>
+</blockquote>
+<p>在网上搜了一下，翻出来都是两年前的帖子，于是自己看了下源代码，<br>在我生成的某个post里disqus的代码是这样的</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> disqus_shortname = <span class="string">'ikumo-shortname'</span>;</div><div class="line"><span class="comment">// var disqus_developer = 1;</span></div><div class="line"><span class="keyword">var</span> disqus_identifier = <span class="string">'ikumo.im/blog/2013/01/08/a-letter-to-daughter/'</span>;</div><div class="line"><span class="keyword">var</span> disqus_url = <span class="string">'ikumo.im/blog/2013/01/08/a-letter-to-daughter/'</span>;</div><div class="line"><span class="keyword">var</span> disqus_script = <span class="string">'embed.js'</span>;</div><div class="line">      </div><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> dsq = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>); dsq.type = <span class="string">'text/javascript'</span>; dsq.async = <span class="literal">true</span>;</div><div class="line">  dsq.src = <span class="string">'http://'</span> + disqus_shortname + <span class="string">'.disqus.com/'</span> + disqus_script;</div><div class="line">  (<span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>] || <span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>]).appendChild(dsq);</div><div class="line">&#125;());</div></pre></td></tr></table></figure>
+<p>感觉没有明显错误,查看octorpress里<br><code>\source\_includes\disqus.html</code>信息</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> disqus_shortname = <span class="string">'ikumo-shortname'</span>;</div><div class="line">% <span class="keyword">if</span> page.comments == <span class="literal">true</span> %</div><div class="line">% comment % <span class="string">`page.comments`</span> can be only be set to <span class="literal">true</span> on pages/posts, so we embed the comments here. % endcomment %</div><div class="line">    <span class="comment">// var disqus_developer = 1;</span></div><div class="line">    <span class="keyword">var</span> disqus_identifier = <span class="string">'&#123;&#123; site.url &#125;&#125;&#123;&#123; page.url &#125;&#125;'</span>;</div><div class="line">    <span class="keyword">var</span> disqus_url = <span class="string">'&#123;&#123; site.url &#125;&#125;&#123;&#123; page.url &#125;&#125;'</span>;</div><div class="line">    <span class="keyword">var</span> disqus_script = <span class="string">'embed.js'</span>;</div><div class="line">% <span class="keyword">else</span> %</div><div class="line">    % comment % As <span class="string">`page.comments`</span> is empty, we must be on the index page. % endcomment %</div><div class="line">    <span class="comment">// var disqus_script = 'count.js';</span></div><div class="line">  % endif %</div><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> dsq = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>); dsq.type = <span class="string">'text/javascript'</span>; dsq.async = <span class="literal">true</span>;</div><div class="line">  dsq.src = <span class="string">'http://'</span> + disqus_shortname + <span class="string">'.disqus.com/'</span> + disqus_script;</div><div class="line">  (<span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>] || <span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>]).appendChild(dsq);</div><div class="line">&#125;());</div></pre></td></tr></table></figure>
+<p>仿照disqus里的example将function里<code>disqus_script</code>注释掉，<br>直接使用字符串<code>embed.js</code>再重新generate和deploy就可以了,<br>目测是没有评论时<code>count.js</code>出错。</p>
 
       
     </div>
@@ -310,7 +337,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hello-World/" rel="tag">#Hello World</a>
+            <a href="/tags/Octopress/" rel="tag">#Octopress</a>
+          
+            <a href="/tags/disqus/" rel="tag">#disqus</a>
           
         </div>
       
@@ -319,12 +348,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2013/01/08/a-letter-to-daughter/" rel="next" title="给女儿的一封信">
+                <i class="fa fa-chevron-left"></i> 给女儿的一封信
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2012/12/19/how-to-set-up-dropbox-via-ssh-on-vps/" rel="prev" title="设置远程主机的dropbox自动启动">
-                设置远程主机的dropbox自动启动 <i class="fa fa-chevron-right"></i>
+              <a href="/2013/01/30/dual-boost-with-windows-8-and-debian/" rel="prev" title="Windows 8 and Debian 双启动">
+                Windows 8 and Debian 双启动 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
