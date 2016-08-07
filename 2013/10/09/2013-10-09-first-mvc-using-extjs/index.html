@@ -1,0 +1,675 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="MVC, application, Javascript, ExtJS, tutorial" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="应用程序的可扩展性，可维护性和灵活性主要取决于该程序体系结构的质量。不幸的是，它往往都被事后才被考虑到。概念验证和原型转变成大量大量的应用，而示例代码则被复制粘贴入了如此大量应用的基础程序。你估计也会想这么做，因为这是在工程伊始你可以预想到的最快的进度。
+但是，相比较于花费在未来维护，扩展和多次重构你的应用的时间上，这点节省下来的时间是微不足道的。遵循一定的约定和坚持在视图，模型，存储器以及控制器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ExtJS首个MVC应用入门">
+<meta property="og:url" content="http://blog.ifengdragon.com/2013/10/09/2013-10-09-first-mvc-using-extjs/index.html">
+<meta property="og:site_name" content="Keep Walking">
+<meta property="og:description" content="应用程序的可扩展性，可维护性和灵活性主要取决于该程序体系结构的质量。不幸的是，它往往都被事后才被考虑到。概念验证和原型转变成大量大量的应用，而示例代码则被复制粘贴入了如此大量应用的基础程序。你估计也会想这么做，因为这是在工程伊始你可以预想到的最快的进度。
+但是，相比较于花费在未来维护，扩展和多次重构你的应用的时间上，这点节省下来的时间是微不足道的。遵循一定的约定和坚持在视图，模型，存储器以及控制器">
+<meta property="og:image" content="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/base_layout.png">
+<meta property="og:image" content="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/too-granular.png">
+<meta property="og:image" content="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/too-general.png">
+<meta property="og:image" content="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/balanced.png">
+<meta property="og:image" content="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/models.png">
+<meta property="og:image" content="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/stores.png">
+<meta property="og:image" content="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/controllers.png">
+<meta property="og:updated_time" content="2016-08-07T13:51:24.820Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ExtJS首个MVC应用入门">
+<meta name="twitter:description" content="应用程序的可扩展性，可维护性和灵活性主要取决于该程序体系结构的质量。不幸的是，它往往都被事后才被考虑到。概念验证和原型转变成大量大量的应用，而示例代码则被复制粘贴入了如此大量应用的基础程序。你估计也会想这么做，因为这是在工程伊始你可以预想到的最快的进度。
+但是，相比较于花费在未来维护，扩展和多次重构你的应用的时间上，这点节省下来的时间是微不足道的。遵循一定的约定和坚持在视图，模型，存储器以及控制器">
+<meta name="twitter:image" content="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/base_layout.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://blog.ifengdragon.com/2013/10/09/2013-10-09-first-mvc-using-extjs/"/>
+
+  <title> ExtJS首个MVC应用入门 | Keep Walking </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Keep Walking</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                ExtJS首个MVC应用入门
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2013-10-09T20:59:00+08:00" content="2013-10-09">
+              2013-10-09
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/ExtJS/" itemprop="url" rel="index">
+                    <span itemprop="name">ExtJS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>应用程序的可扩展性，可维护性和灵活性主要取决于<br>该程序体系结构的质量。<br>不幸的是，它往往都被事后才被考虑到。<br>概念验证和原型转变成大量大量的应用，<br>而示例代码则被复制粘贴入了如此大量应用的基础程序。<br>你估计也会想这么做，<br>因为这是在工程伊始你可以预想到的最快的进度。</p>
+<p>但是，相比较于花费在未来维护，扩展和多次重构你的应用<br>的时间上，这点节省下来的时间是微不足道的。<br>遵循一定的约定和坚持在视图，模型，存储器以及控制器被执行前定义<br>是实现一个坚实架构的较好的途径。在这篇文章里，<br>我们将介绍一个较受欢迎的应用和讨论如何构筑用户界面来创建一个稳固的应用程序。</p>
+<h1 id="组织代码"><a href="#组织代码" class="headerlink" title="组织代码"></a>组织代码</h1><hr>
+<p><br>  </p>
+<p>应用程序的体系结构为与它相关的实际类和框架代码提供<br>结构性和一致性。<br>建立一个良好的体系会赋予应用程序许许多多重要的好处：</p>
+<ul>
+<li><p>每个你建立的应用都按相同的模式工作，所以学一通百，节省学习成本</p>
+</li>
+<li><p>移植代码会变得很轻松，因为所有的应用的工作接口都一致</p>
+</li>
+<li><p>你可以使用ExtJS build tool为产品用途创建自己程序的改进版</p>
+</li>
+</ul>
+<p>在ExtJS 4里面，我们已经定义了一些你在创建应用时或许应该考虑遵循的”惯例”，<br>最引人注目的当属统一的目录结构。这个简单的结构将所有的类保存在了app根目录下，<br>该目录里包含了所需要的模型，视图，控制器和存储器的子目录。</p>
+<p>在ExtJS 4提供用户体验良好的如何架构你的应用程序的相关训练的同时，<br>ExtJS也为用户留有自定义文件和类名的余裕。<br>比如说，你可以决定是否要在你的项目里为控制器加入“Controller”的后缀，<br>e.g. “Users”写成“UsersController”。<br>在这种情况下，要记得始终向控制器文件和控制器类加入相同的后缀。<br>最重要的是你要在开始编写你的应用前决定好你的“惯例”，并贯彻它。<br>最后，当你能够调用一切你想使用的类的时候，<br>我们强烈建议您在命名和文件结构上遵循我们的惯例，<br>这将确保你可以使用我们的SDK tool得到优化好的版本。</p>
+<a id="more"></a>
+<h1 id="寻求平衡点"><a href="#寻求平衡点" class="headerlink" title="寻求平衡点"></a>寻求平衡点</h1><hr>
+<p><br></p>
+<h2 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h2><hr>
+<p><br>  </p>
+<p>分割应用程序的UI到我们程序中得视图通常是程序的开始。<br>多数情况下，设计师会为你设计好线框图和UI，<br>例如下图所示的非常诱人的Pandora应用，<br>想象下我们要用ExtJS来实现它。</p>
+<p><img src="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/base_layout.png" alt="Pandora"></p>
+<p>我们想实现的是在过于繁琐和过于笼统的视图中获取平衡，<br>让我们看一下如果我们将UI过度划分会怎么样：</p>
+<p><img src="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/too-granular.png" alt="Pandora-granular"></p>
+<p>如上图若划分过细的话会使得工程难以管理，引用和控制这些视图。<br>同时，由于每一个视图都会拥有它自己的文件，<br>创建过多的视图或许会使得定位相关的文件过于困难。</p>
+<p>另一方面，我们也不希望视图被划分的过于笼统，<br>因为它会影响更改视图时的灵活性。</p>
+<p><img src="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/too-general.png" alt="Pandora-general"></p>
+<p>在这个场景里，每个视图都被过度的简化。<br>当一个视图里德某些部分需要被自定义视图逻辑的时候，<br>视图类将疲于过多的回应，导致视图类变得过于困难维护。<br>还有，如果设计师改变了思路或者UI的排版，<br>我们也会被自己所设计的视图定义及逻辑的重构所困扰。</p>
+<p>正确的平衡点在于我们能够简单的重新安排页面上的视图<br>而不必每次都去重构它们。<br>比如说，我们想把Ad做成一个单独的视图，这样我们可以<br>简单的移动它甚至在以后移除它。</p>
+<p><img src="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/balanced.png" alt="Pandora-balance"></p>
+<p>在这个版本里，<br>我们依据各个视图的任务划分了不同的视图。<br>一旦你已经有了大体的划分思路后，<br>依然可以调整视图的细度当你实际实现他们的时候。<br>有时你会觉得某两个视图应该被合并成一个，<br>或者某个视图太过笼统应该被划分为多个，<br>但一个好的基础会有助于开始。</p>
+<h2 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h2><hr>
+<p><br>  </p>
+<p>现在我们已经布置好了视图的基本结构，<br>该是分析模型的时候了。<br>通过观察在我们UI里动态数据的类型，<br>我们可以大致了解到在该应用里所需要的不同的模型。</p>
+<p><img src="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/models.png" alt="Pandora-model"></p>
+<p>观察上图，我们决定仅仅使用两个模型：音乐与音乐站。<br>我们可以再多定义两个模型，例如歌手和唱片集。<br>但是也类似于视图的划分，<br>我们不希望模型过于得琐碎。<br>在本例子中，我们没有必要单独划分出歌手和唱片集，<br>是因为在这个应用里程序不支持用户通过歌手来选择指定的歌曲。<br>相反的，数据是按音乐站来组织的，<br>而且音乐才是数据的关键，歌手和唱片集信息仅作为歌曲的属性，<br>这意味着我们可以合并音乐，歌手和唱片集信息到一个模型里面。<br>这会大大简化该应用程序的数据上的设置，<br>而且也会更易于服务器端API的实现，因为我们不必加载单独的歌手或是唱片信息。<br>总而言之，该例我们将会只有两个模型：音乐与音乐站。</p>
+<h1 id="存储器"><a href="#存储器" class="headerlink" title="存储器"></a>存储器</h1><hr>
+<p><br></p>
+<p>我们刚刚决定了应该使用的模型，<br>现在让我们按同样的方式来考虑下该怎么设计存储器。</p>
+<p><img src="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/stores.png" alt="Pandora-store"></p>
+<p>辨别出所需要的存储器相较而言还是比较容易的。<br>一个好的策略是判断出页面上所有的数据组件。<br>在本例中，我们拥有一份关于用户收藏的音乐站，最近播放过的歌曲滚动列表<br>以及可以显示搜索结果的搜索栏的清单。<br>与此同时，每一个相对应的视图也需要同存储器绑定。</p>
+<h1 id="控制器"><a href="#控制器" class="headerlink" title="控制器"></a>控制器</h1><hr>
+<p><br></p>
+<p>通过设计控制器，你可以采用多种方式来确定应用的响应方式。<br>让我们看一下在本例中都需要哪些控制器吧。</p>
+<p><img src="http://docs.sencha.com/extjs/4.2.1/guides/mvc_pt1/controllers.png" alt="Pandora-controller"></p>
+<p>这里我们有两个基础的控制器：音乐控制器和音乐站控制器。<br>ExtJS 4允许你使用一个控制器同时控制多个视图。<br>我们的音乐站控制器要负责新建音乐站，以及将用户要收藏的音乐站加载<br>到音乐站列表里去的逻辑功能。音乐管理器将要处理管理音乐信息的一览，<br>最近播放过的歌曲的存储和用户的相关操作，比如喜欢/不喜欢，暂停，跳过等等。<br>控制器之间能够通过激励和监听程序的事件来互动。<br>如果我们再增添两个额外的控制器：一个用来管理回放，另一个为了音乐站的搜索，<br>我想我们已经找到了最好的责任划分。</p>
+<h1 id="多思量"><a href="#多思量" class="headerlink" title="多思量"></a>多思量</h1><hr>
+<p><br></p>
+<p>动手写代码之前要优先考虑整个应用的架构的思路希望对你的工作有益处，<br>我们发现，讨论程序的细节会有助于建立更加灵活和易于管理的代码。</p>
+<p>关于ExtJs的原文可以见<a href="http://docs.sencha.com/extjs/4.2.1/#!/guide/mvc_pt1" target="_blank" rel="external">这里</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/MVC/" rel="tag">#MVC</a>
+          
+            <a href="/tags/ExtJS/" rel="tag">#ExtJS</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2013/10/07/2013-10-07-dns-configure/" rel="next" title="DNS configure">
+                <i class="fa fa-chevron-left"></i> DNS configure
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2013/10/11/2013-10-11-first-mvc-using-extjs-part-2/" rel="prev" title="ExtJS首个MVC应用入门 part 2">
+                ExtJS首个MVC应用入门 part 2 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="iFeng" />
+          <p class="site-author-name" itemprop="name">iFeng</p>
+          <p class="site-description motion-element" itemprop="description">Keep walking</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">46</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">43</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#组织代码"><span class="nav-number">1.</span> <span class="nav-text">组织代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#寻求平衡点"><span class="nav-number">2.</span> <span class="nav-text">寻求平衡点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#视图"><span class="nav-number">2.1.</span> <span class="nav-text">视图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型"><span class="nav-number">2.2.</span> <span class="nav-text">模型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#存储器"><span class="nav-number">3.</span> <span class="nav-text">存储器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#控制器"><span class="nav-number">4.</span> <span class="nav-text">控制器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多思量"><span class="nav-number">5.</span> <span class="nav-text">多思量</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  Sun Mar 01 2015 08:00:00 GMT+0800 (SGT) - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">iFeng</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

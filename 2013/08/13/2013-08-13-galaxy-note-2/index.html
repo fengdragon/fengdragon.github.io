@@ -1,0 +1,647 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Docomo, Galaxy note II, ikumo, Japan, root" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="生命在于折腾一点儿不假，感觉我的生活都在这些追求细节的小事儿上“虚度”过去了。
+好像是前天还是啥时候，Lumia 820的微信不支持推送了，我还是第一次出现这个问题，去搜了win8，微信推送后，看到好多哥们从去年或者一开始就有不推送的烦恼。我这还算幸运的。。。
+不推送按说没什么大问题，但关键我现在换在了docomo这，平时大家都不给我打电话了，然后只靠微信或者line来联系，这个时候不能推送的微信">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docomo Galaxy Note II 刷机及root">
+<meta property="og:url" content="http://blog.ifengdragon.com/2013/08/13/2013-08-13-galaxy-note-2/index.html">
+<meta property="og:site_name" content="Keep Walking">
+<meta property="og:description" content="生命在于折腾一点儿不假，感觉我的生活都在这些追求细节的小事儿上“虚度”过去了。
+好像是前天还是啥时候，Lumia 820的微信不支持推送了，我还是第一次出现这个问题，去搜了win8，微信推送后，看到好多哥们从去年或者一开始就有不推送的烦恼。我这还算幸运的。。。
+不推送按说没什么大问题，但关键我现在换在了docomo这，平时大家都不给我打电话了，然后只靠微信或者line来联系，这个时候不能推送的微信">
+<meta property="og:updated_time" content="2016-08-07T13:51:24.820Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Docomo Galaxy Note II 刷机及root">
+<meta name="twitter:description" content="生命在于折腾一点儿不假，感觉我的生活都在这些追求细节的小事儿上“虚度”过去了。
+好像是前天还是啥时候，Lumia 820的微信不支持推送了，我还是第一次出现这个问题，去搜了win8，微信推送后，看到好多哥们从去年或者一开始就有不推送的烦恼。我这还算幸运的。。。
+不推送按说没什么大问题，但关键我现在换在了docomo这，平时大家都不给我打电话了，然后只靠微信或者line来联系，这个时候不能推送的微信">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://blog.ifengdragon.com/2013/08/13/2013-08-13-galaxy-note-2/"/>
+
+  <title> Docomo Galaxy Note II 刷机及root | Keep Walking </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Keep Walking</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Docomo Galaxy Note II 刷机及root
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2013-08-13T19:57:00+08:00" content="2013-08-13">
+              2013-08-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Dairy-Japan/" itemprop="url" rel="index">
+                    <span itemprop="name">Dairy Japan</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>生命在于折腾一点儿不假，<br>感觉我的生活都在这些追求细节的小事儿上“虚度”过去了。</p>
+<p>好像是前天还是啥时候，Lumia 820的微信不支持推送了，<br>我还是第一次出现这个问题，去搜了win8，微信推送后，<br>看到好多哥们从去年或者一开始就有不推送的烦恼。<br>我这还算幸运的。。。</p>
+<p>不推送按说没什么大问题，<br>但关键我现在换在了docomo这，平时大家都不给我打电话了，<br>然后只靠微信或者line来联系，<br>这个时候不能推送的微信就不能忍了。<br>于是我又想起来我放在家里的galaxy note II了。</p>
+<a id="more"></a>
+<p>Galaxy note II是当初办docomo时随卡选的机型，<br>但这家伙个儿太大，比我半张脸都大让我怎么拿出去打电话阿，<br>也是因此，当时让朋友在香港入手了820的。</p>
+<p>鉴于现在的win8系统处于半残废状态，<br>我还是把note II再刷一下吧。note II的源rom是docomo定制的，<br>一启动就会自己安装上好多docomo的服务app，<br>看上去就烦人，而且你明明用不到还不能删，<br>不舒服就给刷了它！想想我已经尝试刷它这是第三次了，<br>而这一次终于用了一个晚上给搞定了。</p>
+<ul>
+<li><p>准备rom和root的镜像<br>  Docomo的galaxy默认的启动模式是3e，<br>  它的功能太弱，读入的rom包总提示签名验证不通过，<br>  所以一定要刷个CWM的启动引导类似的东西。<br>  刷上了它，就可以正常读取定制rom进行刷机了。<br>  刷机用odin 3.x版本，软件和镜像我就没有贴上来，<br>  思路有了，那些可以网上搜到的，<br>  或者有人需要的话联系我也可以。</p>
+</li>
+<li><p>刷入CWM的root镜像，印象里刷N7100是不管用的，<br>  刷进去以后还是3e的启动项，读取sd卡的rom后<br>  总是提示验证不通过，前两次就是云里雾里一直卡在这里。<br>  一度怀疑是没有root权限，所以跨步刷了N7105的root文件，<br>  结果固件不符，自此一直不断的重启，<br>  完全已经绝望的时候，搜了一下关键字，才意外的发现了N7108的<br>  cwm+root的镜像文件，刷进去以后居然好了！</p>
+</li>
+<li><p>刷入定制的rom文件。<br>  上一步完成后，进入恢复模式，就会看到CWM xxxx的抬头的引导系统，<br>  进去wipe掉所有数据和缓存，<br>  然后进去sd卡，选择之后拷好的rom文件，就可以等着安装了</p>
+</li>
+<li><p>刷完基本就已经可以用了，<br>  但我刷的固件貌似是国内哥们做的，hosts文件里没有google server的<br>  解析，因此必须root掉系统，然后自己覆盖掉源固件里的hosts文件。<br>  因此要执行一遍root。<br>  在这个过程中，曾经试过用卓大师的一键root，事实证明是不管用的，<br>  它的软件界面上说root成功，但重启后手机进入显示su升级失败，<br>  还是要手动刷root文件靠谱。</p>
+</li>
+<li><p>这时就可以收工了。自己设置好apn，装好软件，一切顺利。<br>  至于能不能用其他公司的卡，还没有测试，暂按下不表。</p>
+</li>
+</ul>
+<p>遇到的几个问题：</p>
+<ul>
+<li><p>微信不能推送，有人说取消掉系统时间的自动设置就可以，<br>  但我在测试的时候完全不管用。</p>
+</li>
+<li><p>三星使用odin刷机的时候卡在setup connection的时候<br>  多是因为打开过三星官方的软件，占用了port口，<br>  重启下电脑，换个usb口再让系统自己装下驱动就好了</p>
+</li>
+<li><p>大热天的手里有个扇子能帮你冷静很多</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/docomo/" rel="tag">#docomo</a>
+          
+            <a href="/tags/Galaxy/" rel="tag">#Galaxy</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2013/08/08/2013-08-08-matlab-installation/" rel="next" title="Matlab 在debian/linux下的安装方法">
+                <i class="fa fa-chevron-left"></i> Matlab 在debian/linux下的安装方法
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2013/10/06/2013-10-06-vim-tabbar-in-mac/" rel="prev" title="vim的Tabbar插件设置">
+                vim的Tabbar插件设置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="iFeng" />
+          <p class="site-author-name" itemprop="name">iFeng</p>
+          <p class="site-description motion-element" itemprop="description">Keep walking</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">46</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">43</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  Sun Mar 01 2015 08:00:00 GMT+0800 (SGT) - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">iFeng</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

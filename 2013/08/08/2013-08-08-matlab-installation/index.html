@@ -1,0 +1,629 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Linux, Matlab, ikumo.im, Debian" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="频发性的手贱，上周一时贪爽，从Debian 6升级到了wheezy，结果运行是挺正常的，但ibus的输入候选框只能在大窗口的左下。比如说我用ibus的中文输入法在terminal里用vim写日志，如果我把terminal全屏，就看不到中文输入的候选项。。。网页也一样，在地址栏或者搜索栏输入的时候，中日文的候选框也经常跑到整个浏览器的最下左方。同时更重要的是以前编译过的程序跑不起来。。。于是我只能再">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Matlab 在debian/linux下的安装方法">
+<meta property="og:url" content="http://blog.ifengdragon.com/2013/08/08/2013-08-08-matlab-installation/index.html">
+<meta property="og:site_name" content="Keep Walking">
+<meta property="og:description" content="频发性的手贱，上周一时贪爽，从Debian 6升级到了wheezy，结果运行是挺正常的，但ibus的输入候选框只能在大窗口的左下。比如说我用ibus的中文输入法在terminal里用vim写日志，如果我把terminal全屏，就看不到中文输入的候选项。。。网页也一样，在地址栏或者搜索栏输入的时候，中日文的候选框也经常跑到整个浏览器的最下左方。同时更重要的是以前编译过的程序跑不起来。。。于是我只能再">
+<meta property="og:updated_time" content="2016-08-07T13:51:24.820Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Matlab 在debian/linux下的安装方法">
+<meta name="twitter:description" content="频发性的手贱，上周一时贪爽，从Debian 6升级到了wheezy，结果运行是挺正常的，但ibus的输入候选框只能在大窗口的左下。比如说我用ibus的中文输入法在terminal里用vim写日志，如果我把terminal全屏，就看不到中文输入的候选项。。。网页也一样，在地址栏或者搜索栏输入的时候，中日文的候选框也经常跑到整个浏览器的最下左方。同时更重要的是以前编译过的程序跑不起来。。。于是我只能再">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://blog.ifengdragon.com/2013/08/08/2013-08-08-matlab-installation/"/>
+
+  <title> Matlab 在debian/linux下的安装方法 | Keep Walking </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Keep Walking</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Matlab 在debian/linux下的安装方法
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2013-08-08T13:19:00+08:00" content="2013-08-08">
+              2013-08-08
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>频发性的手贱，上周一时贪爽，<br>从Debian 6升级到了wheezy，结果运行是挺正常的，<br>但ibus的输入候选框只能在大窗口的左下。<br>比如说我用ibus的中文输入法在terminal里用vim写日志，<br>如果我把terminal全屏，就看不到中文输入的候选项。。。<br>网页也一样，在地址栏或者搜索栏输入的时候，<br>中日文的候选框也经常跑到整个浏览器的最下左方。<br>同时更重要的是以前编译过的程序跑不起来。。。<br>于是我只能再退回去了，而退回去也没有什么好法子，<br>就是格掉/分区，然后保留/home分区重装了一下。</p>
+<a id="more"></a>
+<p>重装之后一切配置都还在，只偶尔少几个软件，<br>使用apt-get就可以了，但matlab这种大家伙还是得自己光盘安装了。</p>
+<ul>
+<li><p>首先光盘不好找。。下了几个包都是win安装程序，<br>要支持linux 64位的还真得翻一番。<br>最终我是在实验室的角落旮旯里找到了2009年版的。。算了，<br>能用就好。</p>
+</li>
+<li><p>光盘挂载，但无法安装。挂载比较简单，使用<code>mount</code>命令就可以，<br>但进入后执行<code>sudo sh install</code>就会报错：</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">An error status was returned by the program <span class="string">'xsetup'</span>,</div><div class="line">the X Window System version of <span class="string">'install'</span>. The following</div><div class="line">messages were written to standard error:</div><div class="line"></div><div class="line">/home/<span class="variable">$USER</span>/mathworks_downloads/R2009a/update/install/main.sh: line 86: /home/<span class="variable">$USER</span>/Download/MatlabR2009a/update/bin/<span class="variable">$ARCH</span>/xsetup: Permission denied</div><div class="line"></div><div class="line">Attempt to fix the problem and try again. If X is not available</div><div class="line">or <span class="string">'xsetup'</span> cannot be made to work <span class="keyword">then</span> try the terminal</div><div class="line">version of <span class="string">'install'</span> using the <span class="built_in">command</span>:</div><div class="line"></div><div class="line">install* -t or INSTALL* -t</div><div class="line"></div><div class="line">-------------------------------------------------------------------</div><div class="line"></div><div class="line">Sorry! Setup aborted . . .</div></pre></td></tr></table></figure>
+<p>出现错误的原因是简单的挂载，里面的文件都是不可执行的，<br>可以运行<code>mount</code>，输出的list里就能看到挂载的选项是<code>noexec</code>的，<br>执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mount -o remount,<span class="built_in">exec</span> <span class="variable">$CD_DEVICE</span></div></pre></td></tr></table></figure></p>
+<p>就可以了。</p>
+<ul>
+<li>执行成功，但缺少lib：<code>libXp.so.6</code>，此时只需要安装libXp6即可</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install libXp6</div></pre></td></tr></table></figure>
+<p>此后就可以进入安装程序了</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/matlab/" rel="tag">#matlab</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2013/08/06/2013-08-06-first-fit-time/" rel="next" title="增肌塑性第一步 --- 算">
+                <i class="fa fa-chevron-left"></i> 增肌塑性第一步 --- 算
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2013/08/13/2013-08-13-galaxy-note-2/" rel="prev" title="Docomo Galaxy Note II 刷机及root">
+                Docomo Galaxy Note II 刷机及root <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="iFeng" />
+          <p class="site-author-name" itemprop="name">iFeng</p>
+          <p class="site-description motion-element" itemprop="description">Keep walking</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">46</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">43</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  Sun Mar 01 2015 08:00:00 GMT+0800 (SGT) - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">iFeng</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
