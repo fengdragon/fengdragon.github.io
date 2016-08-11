@@ -105,7 +105,7 @@
     motion: true,
     duoshuo: {
       userId: 0,
-      author: '博主'
+      author: 'Author'
     }
   };
 </script>
@@ -118,10 +118,19 @@
   <title> Keep Walking </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
 
   
 
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37149880-2', 'auto');
+  ga('send', 'pageview');
+</script>
 
 
 
@@ -175,7 +184,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            首页
+            Home
           </a>
         </li>
       
@@ -185,7 +194,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            归档
+            Archives
           </a>
         </li>
       
@@ -195,7 +204,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            标签
+            Tags
           </a>
         </li>
       
@@ -205,7 +214,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            关于
+            About
           </a>
         </li>
       
@@ -261,7 +270,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">发表于</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-08-07T00:15:15+08:00" content="2016-08-07">
               2016-08-07
             </time>
@@ -297,7 +306,7 @@
 
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/08/07/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
+              Read more &raquo;
             </a>
           </div>
         
@@ -360,7 +369,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">发表于</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2013-10-11T20:29:00+08:00" content="2013-10-11">
               2013-10-11
             </time>
@@ -372,7 +381,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Dairy-Math/" itemprop="url" rel="index">
@@ -417,7 +426,7 @@
 <p><br /></p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2013/10/11/2013-10-11-talmudh-law/#more" rel="contents">
-              阅读全文 &raquo;
+              Read more &raquo;
             </a>
           </div>
         
@@ -480,7 +489,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">发表于</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2013-10-11T00:24:00+08:00" content="2013-10-11">
               2013-10-11
             </time>
@@ -492,7 +501,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/ExtJS/" itemprop="url" rel="index">
@@ -535,7 +544,7 @@
 
           <div class="post-more-link text-center">
             <a class="btn" href="/2013/10/11/2013-10-11-first-mvc-using-extjs-part-2/#more" rel="contents">
-              阅读全文 &raquo;
+              Read more &raquo;
             </a>
           </div>
         
@@ -598,7 +607,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">发表于</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2013-10-09T20:59:00+08:00" content="2013-10-09">
               2013-10-09
             </time>
@@ -610,7 +619,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/ExtJS/" itemprop="url" rel="index">
@@ -664,7 +673,7 @@
 <p>在ExtJS 4提供用户体验良好的如何架构你的应用程序的相关训练的同时，<br>ExtJS也为用户留有自定义文件和类名的余裕。<br>比如说，你可以决定是否要在你的项目里为控制器加入“Controller”的后缀，<br>e.g. “Users”写成“UsersController”。<br>在这种情况下，要记得始终向控制器文件和控制器类加入相同的后缀。<br>最重要的是你要在开始编写你的应用前决定好你的“惯例”，并贯彻它。<br>最后，当你能够调用一切你想使用的类的时候，<br>我们强烈建议您在命名和文件结构上遵循我们的惯例，<br>这将确保你可以使用我们的SDK tool得到优化好的版本。</p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2013/10/09/2013-10-09-first-mvc-using-extjs/#more" rel="contents">
-              阅读全文 &raquo;
+              Read more &raquo;
             </a>
           </div>
         
@@ -727,7 +736,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">发表于</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2013-10-07T12:25:00+08:00" content="2013-10-07">
               2013-10-07
             </time>
@@ -739,7 +748,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/DNS/" itemprop="url" rel="index">
@@ -785,7 +794,7 @@
 
           <div class="post-more-link text-center">
             <a class="btn" href="/2013/10/07/2013-10-07-dns-configure/#more" rel="contents">
-              阅读全文 &raquo;
+              Read more &raquo;
             </a>
           </div>
         
@@ -848,7 +857,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">发表于</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2013-10-06T18:53:00+08:00" content="2013-10-06">
               2013-10-06
             </time>
@@ -860,7 +869,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Vim/" itemprop="url" rel="index">
@@ -906,7 +915,7 @@
 
           <div class="post-more-link text-center">
             <a class="btn" href="/2013/10/06/2013-10-06-vim-tabbar-in-mac/#more" rel="contents">
-              阅读全文 &raquo;
+              Read more &raquo;
             </a>
           </div>
         
@@ -969,7 +978,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">发表于</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2013-08-13T19:57:00+08:00" content="2013-08-13">
               2013-08-13
             </time>
@@ -981,7 +990,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Dairy-Japan/" itemprop="url" rel="index">
@@ -1023,7 +1032,7 @@
 <p>不推送按说没什么大问题，<br>但关键我现在换在了docomo这，平时大家都不给我打电话了，<br>然后只靠微信或者line来联系，<br>这个时候不能推送的微信就不能忍了。<br>于是我又想起来我放在家里的galaxy note II了。</p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2013/08/13/2013-08-13-galaxy-note-2/#more" rel="contents">
-              阅读全文 &raquo;
+              Read more &raquo;
             </a>
           </div>
         
@@ -1086,7 +1095,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">发表于</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2013-08-08T13:19:00+08:00" content="2013-08-08">
               2013-08-08
             </time>
@@ -1098,7 +1107,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Linux/" itemprop="url" rel="index">
@@ -1138,7 +1147,7 @@
           <p>频发性的手贱，上周一时贪爽，<br>从Debian 6升级到了wheezy，结果运行是挺正常的，<br>但ibus的输入候选框只能在大窗口的左下。<br>比如说我用ibus的中文输入法在terminal里用vim写日志，<br>如果我把terminal全屏，就看不到中文输入的候选项。。。<br>网页也一样，在地址栏或者搜索栏输入的时候，<br>中日文的候选框也经常跑到整个浏览器的最下左方。<br>同时更重要的是以前编译过的程序跑不起来。。。<br>于是我只能再退回去了，而退回去也没有什么好法子，<br>就是格掉/分区，然后保留/home分区重装了一下。</p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2013/08/08/2013-08-08-matlab-installation/#more" rel="contents">
-              阅读全文 &raquo;
+              Read more &raquo;
             </a>
           </div>
         
@@ -1201,7 +1210,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">发表于</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2013-08-06T14:48:00+08:00" content="2013-08-06">
               2013-08-06
             </time>
@@ -1213,7 +1222,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Dairy-Fit/" itemprop="url" rel="index">
@@ -1253,7 +1262,7 @@
           The first step of fitime, to be a strong man, ikumo.im
           <div class="post-more-link text-center">
             <a class="btn" href="/2013/08/06/2013-08-06-first-fit-time/">
-              阅读全文 &raquo;
+              Read more &raquo;
             </a>
           </div>
         
@@ -1316,7 +1325,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">发表于</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2013-08-05T15:02:00+08:00" content="2013-08-05">
               2013-08-05
             </time>
@@ -1328,7 +1337,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
+              <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Dairy/" itemprop="url" rel="index">
@@ -1374,7 +1383,7 @@
 <p>翻完整个页面就完全没有极路由什么事（都想爆粗口了。。<br>几经周转，终于发现了<a href="http://www.hiwifi.com/products">产品中心</a>，<br>我们来看看它的参数。</p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2013/08/05/2013-08-05-hiwifi/#more" rel="contents">
-              阅读全文 &raquo;
+              Read more &raquo;
             </a>
           </div>
         
@@ -1449,7 +1458,7 @@
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">46</span>
-              <span class="site-state-item-name">日志</span>
+              <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
@@ -1457,7 +1466,7 @@
             <div class="site-state-item site-state-categories">
               
                 <span class="site-state-item-count">24</span>
-                <span class="site-state-item-name">分类</span>
+                <span class="site-state-item-name">categories</span>
               
             </div>
           
@@ -1466,7 +1475,7 @@
             <div class="site-state-item site-state-tags">
               <a href="/tags">
                 <span class="site-state-item-count">43</span>
-                <span class="site-state-item-name">标签</span>
+                <span class="site-state-item-name">tags</span>
               </a>
             </div>
           
@@ -1521,11 +1530,11 @@
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  主题 -
+  Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Pisces
   </a>
